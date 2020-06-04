@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flowermood</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <script src="../../../js/jquery-3.4.1.js"></script>
+    <script src="../../../js/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            
+            for(i=2; i<5; i++){
+                $(".prd_"+i+"").css({
+                left: (i*100)-100 + "%"
+            })
+            }
+            
+        })
+
+    </script>
+    <style>
+        /* Common */
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            background-color: #515151;
+            transition: 1s;
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+        a{
+            text-decoration: none;
+        }
+        @media screen and (min-width:1200px) {
+
+            /*데스크탑*/
+            body {
+                background-color: #515151;
+            }
+        }
+
+        @media screen and (max-width:480px) {
+
+            /*핸드폰*/
+            body {
+                background-color: #515151;
+            }
+        }
+
+        @media screen and (min-width:480px) and (max-width:1200px) {
+
+            /*태블릿*/
+            body {
+                background-color: #515151;
+            }
+        }
+
+        /* Common END */
+
+        #wrapper {
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+        header {
+            width: 100%;
+            height: 20%;
+
+        }
+
+        nav {
+            width: 95%;
+            height: 10%;
+            padding-top: 10%;
+            padding-left: 5%;
+        }
+        nav>a>img{
+            position: fixed;
+            width: 10px;
+            height: 20px;
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        label {
+            position: fixed;
+            left: 80%;
+            z-index: 5;
+            display: block;
+            width: 50px;
+            height: 50px;
+            background-image: url(../Flowermood/menu_2.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 55px;
+            transition: 1s;
+            border-radius: 20px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        #menu:checked+label {
+            transform: rotate(180deg);
+            box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        #menu:checked~.menuBox {
+            right: 0px;
+        }
+
+        .loginSpan {
+            position: fixed;
+            left: 75%;
+            display: none;
+            width: 100px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            font-weight: 500;
+            font-size: 0.8em;
+            color: #fff;
+        }
+
+        .menuBox {
+            position: fixed;
+            z-index: 4;
+            top: 0;
+            right: -51%;
+            width: 51%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.5);
+            transition: 1s;
+        }
+
+        .menuBox>ul {
+            position: relative;
+            width: 100%;
+            top: 20%;
+            height: 50%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .menuBox>ul>li {
+            list-style: none;
+            width: 100%;
+            text-align: center;
+            height: 90px;
+            line-height: 90px;
+        }
+        
+        section{
+            position: absolute;
+            width: 100%;
+            height: 80%;
+        }
+        .prd_wrap{
+            width: 400%;
+            height: 90%;
+        }
+        .prd_view{
+            width:25%;
+            height: 100%;
+        }
+        .prd{
+            position: absolute;
+            float: left;
+            width: 100%;
+            height: 100%;
+        }
+        .prd>img{
+            display: block;
+            position: relative;
+            left: 50%;
+            margin-left: -154px;
+            width: 308px;
+            height: 464px;
+        }
+        .prd>span{
+            position: relative;
+            top: -40px;
+            display: block;
+            color:#fff;
+            font-size: 20px;
+            font-weight: 600;
+            text-align: center;
+        }
+        .goMenu{
+            position: fixed;
+            left: 50%;
+            margin-left: -40%;
+            width:80%;
+            height: 5%;
+            line-height: 40px;
+            background-color: #333;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+            border-radius: 25px;
+            text-align: center;
+        }
+        .goMenu>a{
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+
+        <nav>
+           <a href="../index.html"><img src="../Flowermood/leftfff.png" alt=""></a>
+
+            <input id="menu" type="checkbox">
+            <label for="menu"></label>
+            <span class="loginSpan">Log in</span>
+
+            <div class="menuBox">
+                <ul>
+                    <li>About us</li>
+                    <li>Online Shop</li>
+                    <li>Board</li>
+                    <li>Mypage</li>
+                </ul>
+            </div>
+
+        </nav>
+
+        <section>
+            
+            <div class="prd_wrap">
+                <div class="prd_view">
+                    <div class="prd prd_1">
+                        <span>Menu</span>
+                        <img src="../Flowermood/prd_1_fixed.png" alt="">
+                    </div>
+                    <div class="prd prd_2">
+                        <span>Menu</span>
+                        <img src="../Flowermood/prd_2_fixed.png" alt="">
+                    </div>
+                    <div class="prd prd_3">
+                        <span>Menu</span>
+                        <img src="../Flowermood/prd_3_fixed.png" alt="">
+                    </div>
+                    <div class="prd prd_4">
+                        <span>Menu</span>
+                        <img src="../Flowermood/prd_4_fixed.png" alt="">
+                    </div>
+                </div>
+                
+            </div>
+            <div class="goMenu"><a href="product.html">SELECT</a></div>
+        </section>
+
+    </div>
+</body>
+
+</html>

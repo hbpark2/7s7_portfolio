@@ -1,0 +1,245 @@
+<?
+	session_start();
+    @extract($_GET); 
+    @extract($_POST); 
+    @extract($_SESSION);  
+?>
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>flowermoods</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="pt.css">
+    <!-- 폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+
+    <!-- 폰트 -->
+    <script src="js/mainpopup.js"></script>
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="nav_js.js"></script>
+    <script src="js/s2_data-json.js"></script>
+    <script src="js/s3_data-json.js"></script>
+    <script src="index_effect.js"></script>
+
+</head>
+
+<body>
+    <div id="skipNav">
+        <a href="#content">본문 바로가기</a>
+        <a href="#gnb">글로벌네비게이션 바로가기</a>
+    </div>
+    <div class="wrapper">
+        <!-- S1(기업소개) START -->
+        <div id="visual">
+            <h3 class="hidden">기업소개</h3>
+
+            <div class="videoBox">
+                <video id="videoBG" preload="auto" autoplay loop="loop" muted="muted">
+                    <source src="images/bg/s1.mp4">
+                </video>
+            </div>
+
+            <p class="intro">
+                <span class="intro_1">We foward on Gardening Culture</span><br>
+                <span class="intro_2">We can give you space<br>
+                    where you can rest with coffee</span><br>
+
+                <span class="go_aboutus">
+                    <a href="sub/about_us/about_us.html">
+                        Go About us <span>></span><span>></span>
+                    </a>
+                </span>
+                <p>
+        </div>
+        <!-- S1(기업소개) END -->
+        <!-- 헤더 삽입 영역 -->
+
+        <? include "common/main_header.html" ?>
+
+        <!-- 헤더 삽입 영역 END -->
+
+        <!-- 본문 컨텐츠 시작 -->
+        <article id="content">
+            <h2 class="hidden">본문 컨텐츠 영역</h2>
+            <section id="s2">
+
+
+            </section>
+            <section id="s3">
+
+
+            </section>
+            <section id="s4">
+                <h3 class="tit">Product</h3>
+                <div class="product_wrap">
+                    <p>특 A급의 건강한 식물
+
+                        좋지못한 식물, 과감한 재고처리
+
+                        직접 하나하나 선별한 차별화된 수형
+
+                        깔끔하고 안전한 포장
+
+                        그리고 식물관리 상담까지 책임지겠습니다.
+                        <br>
+                        반려식물 입양
+
+                        최고로 책임지고 발송하겠습니다.
+
+                        더욱 더 싱그럽고 사랑스러운 식물들을
+
+                        더욱 더 안전하게 받아보세요.</p>
+                    <ul class="product_ul plant_box">
+                        <li>
+                            <a href="#">
+                                <img src="images/pot_bg.jpg" alt="">
+                            </a>
+                            <div class="t_box">
+                                <div>
+                                    <strong>Planterior</strong>
+                                    <a href="#" class="font_box">상품 더보기</a>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li>
+                            <ul>
+                                <li>
+                                    <img src="images/plant_1.jpg" alt="">
+                                </li>
+                                <li class="p_desc">클레마티스 독일SET</li>
+                                <li class="p_desc">49,500원</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li>
+                                    <img src="images/plant_2.jpg" alt="">
+                                </li>
+                                <li class="p_desc">아카시아 팜브리에타</li>
+                                <li class="p_desc">84,000원</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li>
+                                    <img src="images/plant_3.jpg" alt="">
+                                </li>
+                                <li class="p_desc">워터코인</li>
+                                <li class="p_desc">74,000원</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="product_ul brown_box">
+                        <li>
+                            <a href="#">
+                                <img src="images/brown_bg.jpg" alt="">
+                            </a>
+                            <div class="t_box">
+                                <div>
+                                    <strong>Brownmood</strong>
+                                    <a href="#" class="font_box">상품 더보기</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <ul>
+                                <li>
+                                    <img src="images/pot_1.jpg" alt="">
+                                </li>
+                                <li class="p_desc">도자기 인테리어 화병</li>
+                                <li class="p_desc">85,000원</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li>
+                                    <img src="images/pot_4.jpg" alt="">
+                                </li>
+                                <li class="p_desc">와이드 토분&#40; 그레이, 21cm &#41;</li>
+                                <li class="p_desc">29,000원</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li>
+                                    <img src="images/pot_3.jpg" alt="">
+                                </li>
+                                <li class="p_desc">네츄럴 라탄바구니</li>
+                                <li class="p_desc">11,000원</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+
+
+                </div>
+
+            </section>
+            <section id="s5">
+                <h3 class="tit">Board</h3>
+                <ul class="board_wrap">
+                    <li class="news_box">
+                        <span>최근 게시물</span>
+
+                        <? include "../lib/func.php"; ?>
+                        <? latest_article("board", 3, 30); ?>
+
+                    </li>
+                    <li class="go_board">
+                        <a class="plus" href="board/list.php">
+                            <i class="fas fa-clipboard-list"></i>
+                            <br>
+                            게시판 보러가기
+                        </a>
+                    </li>
+
+                </ul>
+
+            </section>
+        </article>
+        <!-- 본문 컨텐츠 끝 -->
+        <!-- 푸터 삽입 영역 START-->
+
+        <? include "common/footer.html" ?>
+
+        <!-- 푸터 삽입 영역 END-->
+
+    </div>
+
+    <!-- 팝업 공지 -->
+    <div id="showimage" style="z-index:99;position:absolute;width:322px;right:200px;top:300px;">
+        <script>
+            function closeWin() {
+                var chk = document.getElementById('Notice')
+                if (chk.checked) {
+                    setCookie("Notice", "done", 1); //1이란 숫자는 1일간 안보임을 뜻합니다. 날짜는 자신에 맞게 수정하세요
+                }
+            }
+            if (getCookie("Notice") == "done") {
+                hidebox();
+            }
+
+        </script>
+        <div>
+            <img src="images/popupimg_3.png" alt="본 사이트는 상업적 목적이 아닌 개인 포트폴리오 용도로 만들어졌습니다. 홈페이지의 일부 내용과 기타 이미지 등은 그 출처가 따로 있음을 밝힙니다.">
+        </div>
+        <div style="font-size:12px;text-align:center;color:#666;">
+            <input type="checkbox" name="Notice" id="Notice" value="" title="오늘은 이창을 열지 않음 선택상자"><label for="Notice">오늘은 이창을 열지 않음.</label>
+            <a href="#" onclick="closeWin();hidebox();return false;"> [close] </a>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>

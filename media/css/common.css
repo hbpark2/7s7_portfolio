@@ -1,0 +1,341 @@
+/* Reset CSS  */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: top;
+    -webkit-text-size-adjust: none;
+}
+
+body {
+    /*    font-family: '돋움', Dotum;*/
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+ul,
+ol,
+dl {
+    list-style: none;
+}
+
+img,
+video {
+    border: 0;
+    vertical-align: top;
+}
+
+a,
+a:link {
+    color: #333;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #333;
+}
+
+a:hover,
+a:active {
+    color: #333;
+    text-decoration: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+input,
+select {
+    vertical-align: middle;
+}
+
+label {
+    cursor: pointer;
+}
+
+.blind,
+legend,
+hr,
+caption {
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: -1000em;
+}
+
+i,
+em,
+address {
+    font-style: normal;
+    font-weight: normal;
+}
+
+p,
+li,
+dd {
+    line-height: 1.5em
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#skipNav {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+#skipNav a {
+    display: block;
+    height: 1px;
+    margin-bottom: -1px;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+}
+
+#skipNav a:hover,
+#skipNav a:focus,
+#skipNav a:active {
+    display: block;
+    height: auto;
+    padding: 5px 0;
+    background: #f00;
+}
+
+.hidden {
+    display: block;
+    position: absolute;
+    left: -1000%;
+    top: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    color: #fff;
+}
+
+#headerArea {
+    position: fixed;
+    z-index: 30;
+    height: 120px;
+    background: rgba(0, 0, 0, .8);
+    left: 0;
+    top: 0;
+    width: 100%
+}
+
+#headerArea .headerInner {
+    width: 90%;
+    margin: 0 5%;
+    overflow: hidden
+}
+
+#headerArea h1 {
+    float: left;
+    margin-top: 10px
+}
+
+
+
+#headerArea #gnb {
+    float: right;
+    margin-top: 45px
+}
+
+#headerArea #gnb ul {
+    overflow: hidden
+}
+
+#headerArea #gnb ul li {
+    float: left;
+    margin-right: 50px;
+}
+
+#headerArea #gnb ul li a {
+    color: #fff;
+    font-family: 'Nanum Brush Script', cursive;
+    font-size: 2em;
+}
+
+#mBtn {
+    display: none;
+    position: fixed;
+    top: 30px;
+    right: 45px;
+    font-size: 22px;
+    color: #fff;
+}
+
+h1 a {
+    position: absolute;
+    z-index: 999;
+    display: block;
+    width: 320px;
+    height: 100px;
+    text-indent: -9999px;
+    background: url(../images/logo320_100.png) no-repeat;
+    background-size: 320px 100px;
+}
+
+/* 헤더 공통영역*/
+
+/* 푸터 공통영역*/
+#footerArea {
+    background: url(../images/themovie/movie_3_bg.jpg);
+}
+
+#footerArea > ul {
+    overflow: hidden;
+}
+
+#footerArea > ul > li {
+    float: right;
+    padding: 1% 0;
+    margin-right: 5%;
+
+}
+
+#footerArea > ul > li > a {
+    font-size: 32px;
+    color: #fff;
+}
+
+#footerArea > span {
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Nanum Brush Script', cursive;
+    color: #fff;
+    padding: 1% 0 5%;
+}
+
+
+
+
+
+/* 일반 pc */
+@media screen and (max-width:1280px) {}
+
+
+/* 테블릿 */
+@media screen and (max-width:1024px) {
+    h1 a {
+        width: 210px;
+        height: 64px;
+        margin-top: 20px;
+        background: url(../images/logo210_64.png) no-repeat;
+        background-size: 210px 64px;
+    }
+
+    #headerArea #gnb ul li {
+        float: left;
+        margin-right: 20px;
+
+    }
+
+    #footerArea > ul > li > a {
+        font-size: 24px;
+    }
+}
+
+/* 소형 테블릿 */
+@media screen and (max-width:768px) {
+    #footerArea > span {
+        font-size: 14px;
+    }
+    #footerArea > ul {
+        padding: 10px 0 20px;
+    }
+
+    #footerArea > ul > li > a {
+        font-size: 18px;
+        color: #fff;
+    }
+
+    #footerArea > span {
+        font-size: 20px;
+    }
+}
+
+
+/* 모바일 */
+@media screen and (max-width:640px) {
+    
+    h1 a {
+        width: 210px;
+        height: 64px;
+        margin-top: 0;
+        background: url(../images/logo210_64.png) no-repeat;
+        background-size: 210px 64px;
+    }
+    #headerArea #gnb ul li a {
+        
+        font-size: 1.8em;
+    }
+    #mBtn {
+        display: block;
+        
+    }
+
+    #headerArea {
+        height: 80px;
+    }
+
+    #headerArea #gnb {
+        display: none;
+        float: none;
+        width: 100%;
+        margin-top: 0;
+        padding: 20px;
+        background: rgba(0, 0, 0, .8);
+        position: absolute;
+        top: 80px;
+        left: 0;
+    }
+
+    header nav li {
+        float: none;
+        float: right;
+        margin: 0;
+        text-align: center
+    }
+    
+}
+
+/* 최소 사이즈 처리 */
+@media screen and (max-width:480px) {
+    #wrap {
+        min-width: 320px;
+    }
+
+    #footerArea > span {
+        font-size: 16px;
+    }
+}
+
+
+
+

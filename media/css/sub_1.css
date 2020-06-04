@@ -1,0 +1,199 @@
+.tit {
+    text-align: center;
+    font-size: 48px;
+    font-family: 'Nanum Brush Script', cursive;
+    color: #fff;
+    padding: 20px 0;
+}
+
+#content {
+    width: auto;
+    margin: 0 auto;
+}
+
+#wrap {
+    overflow: hidden
+}
+
+.videoBox {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+}
+
+#imgBG {
+    position: fixed;
+    /*고정=>fixed/ 스크롤처리=>absolute */
+    left: 50%;
+    top: 50%;
+    /*오른쪽, 아래에 여백을 두지않고 꽉차게 표시*/
+    width: auto;
+    min-width: 100%;
+    /*동영상 너비를 꽉차게*/
+    height: auto;
+    min-height: 100%;
+    /*동영상 높이를 꽉차게*/
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -100;
+    display: block;
+}
+
+.down {
+    display: block;
+    font-size: 40px;
+    font-weight: 600;
+    position: absolute;
+    left: 50%;
+    margin-left: -90px;
+    bottom: 20%;
+    animation: ani 1s infinite alternate;
+    font-family: 'Nanum Brush Script', cursive;
+}
+
+@keyframes ani {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+        color: #fff;
+    }
+
+    100% {
+        transform: scale(1.1);
+        opacity: 0.8;
+        color: #000;
+    }
+}
+
+.visual_txt {
+    position: relative;
+    top: 45%;
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    color: #fff;
+    font-weight: 600;
+    font-size: 3.5em;
+    font-family: 'Nanum Brush Script', cursive;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.clip {
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.subTitle {
+    position: relative;
+    padding-top: 10px;
+    font-size: 1.4em;
+    font-family: 'Nunito Sans', sans-serif;
+    text-align: center;
+    color: #fff
+}
+
+.subTitle:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100px;
+    height: 4px;
+    margin-left: -50px;
+    background: yellow
+}
+
+.clip_part {
+    width: 50%;
+    float: left;
+    margin-bottom: 100px
+}
+
+.clip_part .contentArea {
+    position: relative;
+    width: 96%;
+    margin: 30px auto
+}
+
+.imgPart {
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 30px
+}
+
+.clip_part .contentArea .imgPart .popup-youtube > img {
+    width: 100%;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, .3)
+}
+.contentArea>.tit{
+    display: block;
+    font-size: 24px;
+}
+.clip_part .contentArea p {
+    color: #fff;
+    text-align: justify;
+    font-size: 24px;
+    font-family: 'Nanum Brush Script', cursive;}
+
+.clip_part .playBnt {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 110px;
+    height: 110px;
+    margin: -55px 0 0 -55px;
+    border-radius: 94px;
+    background: rgba(0, 0, 0, .6)
+}
+
+.clip_part .imgPart:hover .playBnt {
+    background: rgba(255, 0, 0, .6)
+}
+
+.clip_part .playBnt img {
+    position: relative;
+    width: auto;
+    top: 50%;
+    left: 50%;
+    margin: -32px 0 0 -20px
+}
+
+@media screen and (max-width:768px) {
+    .down{
+        display: none;
+    }
+    .clip_part {
+        width: auto;
+        float: none;
+    }
+
+}
+
+@media screen and (max-width:640px) {
+    .subTitle {
+        font-size: 1.5em
+    }
+}
+
+@media screen and (max-width:480px) {
+    .clip_part .playBnt {
+        width: 95px;
+        height: 95px;
+        margin: -48px 0 0 -48px
+    }
+
+    .clip_part .contentArea {
+        width: auto
+    }
+}

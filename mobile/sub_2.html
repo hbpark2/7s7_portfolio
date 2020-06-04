@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="formet-detection" content="telephone=no">
+
+
+    <title>flowermood</title>
+
+    <link rel="apple-touch-icon-precomposed" href="app_icon.png">
+    <link rel="apple-touch-startup-image" href="startup.png">
+    <link rel="stylesheet" href="sub/common.css">
+    <link rel="stylesheet" href="sub/sub_2.css">
+
+    <!-- 폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
+    <!-- 폰트 -->
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="js/prefixfree.min.js"></script>
+    <script src="js/idangerous.swiper-2.0.min.js"></script>
+    <script src="sub/common.js"></script>
+    <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9646e721dbb7c73561d274a617e1382a"></script>
+    <script src="sub/map.js"></script>
+
+
+    <!--[if lt IE 9]> 
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+    <!--[if lt IE 9]>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+
+
+</head>
+
+<body>
+    <!--skipNav-->
+    <div id="skipNav">
+        <a href="#content">본문 바로가기</a>
+        <a href="#gnb">글로벌네비게이션 바로가기</a>
+    </div>
+
+    <!--skipNav-->
+    <div id="wrap">
+
+        <!--헤더 삽입 영역-->
+        <? include "common/subheader.html" ?>
+        <!--헤더 삽입 영역-->
+        
+
+        <article id="content">
+            <h2 class="hidden">본문 컨텐츠</h2>
+            <dl>
+                <dt>
+                    <h3 class="sub_tit">오시는길</h3>
+                </dt>
+                <dd>
+                    <div id="map">
+
+
+
+                    </div>
+                </dd>
+            </dl>
+            <h3 class="tit">플라워 무드 광교 </h3>
+ 
+            <dl>
+
+                <dt>위치</dt>
+                <dd>경기도 수원시 영통구 센트럴파크로128번길 100 1층</dd>
+
+                <dt>이메일</dt>
+                <dd>hbpark2@naver.com</dd>
+
+                <dt>전화</dt>
+                <dd>010-2223-0833</dd>
+
+                <dt>영업시간</dt>
+                <dd>
+                    일요일 : 10:00 - 19:00<br>
+                    월요일 : OFF<br>
+                    화요일 : 10:00 - 19:00<br>
+                    수요일 : 10:00 - 19:00<br>
+                    목요일 : 10:00 - 19:00<br>
+                    금요일 : 10:00 - 19:00<br>
+                    토요일 : 10:00 - 19:00<br>
+                </dd>
+
+            </dl>
+            
+        </article>
+
+        <!-- 푸터 삽입 영역 START-->
+
+        <? include "common/footer.html" ?>
+
+        <!-- 푸터 삽입 영역 END-->
+    </div>
+    <script src="https://kit.fontawesome.com/e39232b629.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

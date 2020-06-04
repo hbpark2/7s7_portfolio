@@ -1,0 +1,566 @@
+@charset "utf-8";
+
+/*  Reset CSS  */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+a {
+    outline: 0;
+    text-decoration: none;
+    color: #555;
+}
+
+img {
+    border: 0;
+}
+
+body {
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 16px;
+    color: #333;
+}
+
+.hidden {
+    display: block;
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    color: #fff;
+}
+
+/*로고*/
+h1 {
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    z-index: 10;
+}
+
+h1 img {
+    width: 200px;
+    height: auto;
+}
+
+/*sns*/
+#sns {
+    position: fixed;
+    bottom: 40px;
+    left: 50px;
+    z-index: 14;
+}
+
+#sns li {
+    float: left;
+    margin-left: 20px;
+}
+
+#sns li i {
+    font-size: 25px;
+    color: #111;
+    opacity: 0.5;
+    transition: all 0.5s;
+}
+
+#sns li i:hover {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+/*메뉴*/
+#menu {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    z-index: 13;
+    opacity: 0;
+}
+
+#menu > li {
+    float: left;
+}
+
+#menu a {
+    display: block;
+    width: 150px;
+    height: 60px;
+    font-family: righteous;
+    font-size: 14px;
+    color: #000;
+    text-align: center;
+    overflow: hidden;
+    opacity: 0.8;
+    transition: all 0.3s;
+}
+
+#menu li:hover a {
+    font-size: 24px;
+    opacity: 1;
+}
+
+#menu li.on a {
+    font-size: 24px;
+    opacity: 1;
+}
+
+
+/*레이아웃*/
+section {
+    position: relative;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.intro_wrap {
+    background: url(../img/bg_15.jpg) no-repeat;
+    position: relative;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+
+}
+
+.about_wrap {
+    background: url(../img/bg_16.jpg) no-repeat;
+    position: relative;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 0 -1150px;
+    overflow: hidden;
+
+}
+
+
+
+.skill_wrap {
+    background-color: #ebece7;
+}
+
+.project {
+    background-color: #ffe;
+}
+
+.project_2 {
+    background-color: #ffe;
+}
+
+.project_3 {
+    background-color: #333;
+}
+.project_4{
+    background-color: #fff;
+
+}
+/*텍스트 박스*/
+.intro_wrap .inner {
+    width: 90%;
+    margin: 100px auto;
+}
+
+.inner p {
+    font-size: 50px;
+    letter-spacing: 2px;
+    line-height: 1;
+}
+
+.font_box {
+    font-weight: 600;
+    border: 3px solid #333;
+    box-sizing: border-box;
+}
+
+
+.intro_wrap .right_font {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    color: #333;
+    writing-mode: tb-rl;
+    font-size: 38px;
+}
+
+.intro_wrap > .inner > .main-text {
+    position: relative;
+    z-index: 30;
+    margin: 0 auto;
+    margin-top: 60px;
+    color: #333;
+    font-family: '돋움', serif;
+    font-size: 32px;
+    text-align: left;
+    line-height: 2em;
+
+}
+
+
+
+.about_wrap .inner {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 5%;
+    overflow: hidden;
+}
+
+
+.about_wrap .profile {
+    width: 40%;
+    float: left;
+}
+
+.about_wrap .profile li {
+    width: 50%;
+}
+
+.about_wrap .profile > li > img {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.about_wrap .profile > li:nth-child(1) {
+    overflow: hidden;
+    border-radius: 1000px;
+}
+
+.about_wrap .profile li:nth-child(2) {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.special_bold {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.about_wrap .intro_txt {
+    float: right;
+    font-size: 38px;
+    line-height: 2em;
+    padding-top: 25%;
+
+}
+
+.profile li:nth-child(3) {
+    width: 70%;
+}
+
+.profile dl {
+    width: 100%;
+    overflow: hidden;
+}
+
+.profile dt {
+    width: 30%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 24px;
+    font-weight: 600;
+    float: left;
+    margin-bottom: 10px;
+    
+}
+
+.profile dd {
+    width: 60%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: 500;
+    float: right;
+    margin-bottom: 10px;
+}
+.profile_center{
+    position: absolute;
+    width: 20%;
+    top: 60%;
+}
+.profile_center dl .git {
+    width: 100%;
+    display: block;
+    float: none;
+    clear: both;
+    margin: 20px auto;
+}
+.profile_center dl dt.git {
+    text-align: center;
+    margin-top: 10px;
+}
+.profile_center a{
+    display: block;
+    padding: 10px 0;
+    transition: all .5s;
+}
+.profile_center a:hover{
+    background-color: #800;
+    border-color: #800;
+    color: #fff;
+}
+.profile_center a:hover .fab{
+    color: #fff;
+}
+.profile_center .fab .fas{
+    color:#800;
+    font-size: 24px;
+}
+.profile_center dl dd.git {
+    text-align: center;
+    font-size: 14px;
+}
+.profile_center li.git{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.profile_center li.git a{
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 0;
+}
+
+.skill_wrap .inner {
+    width: 80%;
+    margin: 150px auto 0;
+    overflow: hidden;
+}
+
+.skill_wrap .inner p {
+    width: 40%;
+    float: left;
+    text-align: right;
+    margin-right: 10%;
+    line-height: 1.5em;
+}
+
+.skill_wrap .inner dl {
+    width: 50%;
+    float: right;
+}
+
+.skill_wrap .inner dl dt {
+    position: relative;
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+.skill_wrap .inner dl dd {
+    line-height: 1.5em;
+    font-size: 16px;
+}
+
+.skill_wrap .fab {
+    position: absolute;
+    left: -60px;
+    font-size: 33px;
+    color: #800;
+}
+
+.skill_right .font_box{
+    display: inline-block;
+    padding: 2px 4px;
+}
+
+
+
+.project .inner {
+    width: 90%;
+    margin: 8% auto;
+    overflow: hidden;
+}
+
+.project .inner .desktop {
+    position: relative;
+    width: 42%;
+    float: left;
+    margin-left: 6%;
+    margin-top: 5%;
+    z-index: 5;
+    overflow: hidden;
+}
+
+.pcpng {
+    width: 90%;
+}
+
+.descgif {
+    position: absolute;
+    width: 83.5%;
+    left: 45%;
+    top: 3.5%;
+    transform: translateX(-50%);
+}
+
+.project .inner .desc {
+    width: 50%;
+    margin-top: 5%;
+    margin-left: 50%;
+    overflow: hidden;
+}
+
+.project a {
+    position: relative;
+    z-index: 20;
+    display: block;
+    margin: 15px 0;
+    bottom: 10%;
+    width: 60%;
+    height: 50px;
+    float: right;
+    line-height: 50px;
+    border-radius: 10px;
+    text-align: center;
+    color: #ffe;
+    font-weight: 600;
+    background-color: #333;
+    transition: all .5s;
+}
+
+.project a:hover {
+    background-color: #900;
+
+}
+
+.project > .inner > .desc > p:nth-child(1) {
+    font-size: 42px;
+    line-height: 1.5em;
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.project > .inner > .desc > p:nth-child(2) {
+    font-size: 18px;
+    line-height: 1.8em;
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.desc > dl {
+    font-size: 24px;
+    clear: both;
+    border-top: 3px solid #333;
+}
+
+.desc > dl > dt {
+    padding: 10px 0;
+}
+
+.desc > dl > dd {
+    font-size: 16px;
+    line-height: 1.8em;
+}
+
+
+.project_2 .inner {
+    width: 90%;
+    margin: 3% auto;
+    overflow: hidden;
+}
+
+.project_2 > .inner > .desktop {
+    position: relative;
+    width: 50%;
+    margin-top: 7%;
+    float: left;
+    margin-top: 5%;
+    z-index: 5;
+}
+
+.mobile_png {
+    width: 35%;
+    margin-left: 25%;
+}
+
+.mobile_gif {
+    position: absolute;
+    width: 30%;
+    left: 42.5%;
+    top: 11%;
+    transform: translateX(-50%);
+}
+
+.project_2 > .inner > .desc {
+    width: 40%;
+}
+
+.project_2 a {
+    bottom: 0;
+}
+
+
+
+.project_3 {
+    color: #fff;
+}
+
+
+.project_3 a {
+
+    color: #fff;
+    background-color: #900;
+    transition: all .5s;
+}
+
+.project_3 a:hover {
+    background-color: #fff;
+    color: #333;
+
+}
+.project_3 dl{
+    border-top: 3px solid #fff;
+}
+
+@media screen and (max-width:1280px) {
+    .about_wrap {
+        background: url(../img/bg_16.jpg) no-repeat;
+        position: relative;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: 0 -650px;
+        overflow: hidden;
+
+    }
+    
+    .intro_wrap > .inner > .main-text > span {
+        font-size: 26px;
+
+    }
+
+    .about_wrap .inner {
+        width: 80%;
+        margin-top: 10%;
+    }
+    .about_wrap .intro_txt {
+        float: right;
+        font-size: 38px;
+        line-height: 2em;
+        padding-top: 25%;
+
+    }
+    .profile_center{
+        top: 65%;
+    }
+    .profile dt{
+        font-size: 18px;
+    }
+    .profile dd{
+        font-size: 14px;
+    }
+    .project a {
+        bottom: 0;
+    }
+
+    .project_3 a {
+        bottom: 5%;
+    }
+
+}

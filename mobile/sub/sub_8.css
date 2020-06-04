@@ -1,0 +1,97 @@
+body {
+    font-family: 'Nanum Gothic', sans-serif;
+    background-color: #333;
+}
+
+#content {
+    margin: 60px 0 0;
+        color: #ffe;
+
+}
+.tit {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    padding: 30px 0 20px;
+    text-align: start;
+    font-size: 20px;
+    border-bottom: 1px solid #ffe;
+}
+.now{
+    display: block;
+    padding: 30px 20px 30px;
+    text-align: left;
+    font-size: 16px;
+}
+.sub_tit {
+    padding: 50px 0 50px;
+    text-align: center;
+    font-size: 18px;
+}
+.info{
+    overflow: hidden;
+    margin: 30px 0 10px;
+}
+.info>li{
+    padding: 10px;
+    font-size: 16px;
+}
+.info>li:nth-child(1){
+    float: left;
+    margin-left: 5%;
+    padding-left: 0;
+}
+.info>li:nth-child(2){
+    float: right;
+    margin-right: 5%;
+    background-color: rgba(255,255,240,0.5);
+    border-radius: 5px;
+}
+.add_del{
+    overflow: hidden;
+    margin: 20px 0 60px;
+
+}
+.add_del>li:nth-child(1){
+    float: left;
+    margin-left: 5%;
+    
+}
+.add_del>li:nth-child(2){
+    float: right;
+    margin-right: 5%;
+}
+.total{
+    width: 90%;
+    height: 50%;
+    margin: 0 auto;
+    padding: 20px 0 60%;
+    overflow: hidden;
+    border-top: 1px solid #ffe;
+    font-size: 20px;
+}
+.total>li:nth-child(1){
+    float: left;
+    
+}
+.total>li:nth-child(2){
+    float: right;
+}
+
+
+.go_pay{
+    display: block;
+    width:100%;
+    height:70px;
+    line-height: 70px;
+    background-color: #ffe;
+    color: #333;
+    font-size: 16px;
+    text-align: center;
+    
+}
+
+
+
+
+

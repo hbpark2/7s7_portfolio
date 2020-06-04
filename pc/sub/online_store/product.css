@@ -1,0 +1,248 @@
+        @keyframes headerAni {
+            0% {
+                background-position: 0px 00px;
+            }
+
+            100% {
+                background-position: 0px -100px;
+            }
+        }
+
+        .header_back {
+            position: relative;
+            z-index: 1;
+            top: 0;
+            width: 100%;
+            height: 300px;
+            background-image: url(../common/images/top_2.png);
+            background-size: 100%;
+            animation-name: headerAni;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+        }
+.online{
+    color:#700
+}
+        /*---------------------------------------------------SUB HEADER-----------------------------------------------------*/
+
+        #content {
+            position: relative;
+            width: 1200px;
+            margin: 0 auto;
+            /*            background-color: #e3e3e3;*/
+        }
+
+        .tit_txt {
+            height: 50px;
+            padding: 75px 0 75px; 
+            color: #333;
+            text-align: center;
+            font-size: 54px;
+            font-family: 'Courgette', cursive;
+            font-weight: 600;
+        }
+
+        .prd_img {
+            position: absolute;
+            width: 600px;
+            height: 800px;
+
+            /*            background-color: #666;*/
+        }
+
+        .prd_img > img {
+            position: absolute;
+            width: 600px;
+            height: 800px;
+        }
+
+        .prd_txt {
+            position: relative;
+            left: 650px;
+            width: 550px;
+            height: 800px;
+            /*            background-color: #aaa;*/
+        }
+
+        #tx_box {
+            z-index: 0;
+            width: 550px;
+            height: 100px;
+            opacity: 0;
+            overflow: hidden;
+            transition: 0.5s;
+        }
+
+        .detail_guide {
+            width: 550px;
+            height: 50px;
+            /*            background-color: #ddd;*/
+            border-top: 1px solid #aaa;
+            border-bottom: 1px solid #aaa;
+            box-sizing: border-box;
+        }
+
+        #desExBtn {
+            display: block;
+            width: 90%;
+            height: 30px;
+            line-height: 1.7em;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin: 0 auto;
+            margin-top: 10px;
+            padding-left: 8px;
+            border-radius: 15px;
+            box-shadow: 5px 5px 5px rgba(150,150,130,0.5);
+        }
+        .fas{
+            display: none;
+            float: right;
+            margin:8px 8px 0 0;
+            transition: all .5s;
+        }
+        .p_h {
+            width: 550px;
+            height: 40px;
+            line-height: 40px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 600;
+            font-size: 1.3em;
+            color: #333;
+        }
+
+        .st_1 {
+            width: 550px;
+            height: 20px;
+            font-size: 14px;
+        }
+
+        #tx_box > p {
+            margin-top: 10px;
+            line-height: 30px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .price_box {
+            display: block;
+            margin-top: 40px;
+            width: 550px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 18px;
+            color: #333;
+            border: 2px solid #333;
+            border-radius: 15px;
+        }
+
+        .detail {
+            margin: 100px;
+            margin-top: 200px;
+        }
+
+        .select {
+            margin-top: 40px;
+            height: 170px;
+        }
+
+        .select > div > span {
+            display: inline-block;
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        select {
+            margin-left: 50px;
+            width: 390px;
+            height: 30px;
+            border: none;
+            color: #333;
+            font-weight: 600;
+            background-color: #ffe;
+        }
+
+        .total {
+            display: block;
+            margin: 0 auto;
+            margin-top: 50px;
+            width: 250px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 20px;
+            color: #ffe;
+            background-color: #93b0c3;
+            border: 2px solid #93b0c3;
+            border-radius: 15px;
+        }
+
+        .decide {
+            width: 100%;
+            height: 400px;
+            border-top: 3px dashed #fff;
+        }
+
+        .decide > li {
+            display: block;
+            width: 150px;
+            height: 50px;
+            font-weight: 600;
+            line-height: 50px;
+            border-radius: 25px;
+            text-align: center;
+            color: #ffe;
+            float: left;
+            margin: 30px 15px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        .decide > .buy {
+            border: 1px solid #fa753c;
+            color: #fa753c;
+            /*            background-color: #fa753c;*/
+        }
+
+        .decide > .cart {
+            border: 1px solid #fdbdb0;
+            color: #fdbdb0;
+            /*            background-color: #fdbdb0;*/
+        }
+
+        .decide > .wish {
+            border: 1px solid #fdc86d;
+            color: #fdc86d;
+            /*            background-color: #fdc86d;*/
+        }
+
+
+        .decide > .sp0 {
+            border: 1px solid #fa753c;
+            color: #fff;
+            background-color: #fa753c;
+        }
+
+        .decide > .sp1 {
+            border: 1px solid #fdbdb0;
+            color: #fff;
+            background-color: #fdbdb0;
+        }
+
+        .decide > .sp2 {
+            border: 1px solid #fdc86d;
+            color: #fff;
+            background-color: #fdc86d;
+        }

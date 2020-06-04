@@ -1,0 +1,75 @@
+#content{
+    margin-top: 60px;
+    margin-bottom: 350px;
+}
+#main {
+    padding: 30px 10px 50%;
+}
+
+#main h2 {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+}
+
+.faq {
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    font-size: 12px;
+    float: left
+}
+
+.faq .hgroup {
+    position: relative;
+    font-weight: bold
+}
+
+.faq .hgroup p {
+    color: #cd0000;
+    margin-bottom: 10px
+}
+
+.faq .hgroup .all {
+    float: right;
+    color: #333;
+    text-decoration: none
+}
+
+.faq ul {
+    margin-top: 30px;
+    padding: 0;
+    list-style: none
+}
+
+.faq p.q {
+    margin: 0;
+    border-top: 1px solid #ddd;
+}
+
+.faq p.a {
+    margin: 0;
+    padding: 10px 10px 10px 50px;
+    line-height: 1.5;
+    display: none;
+    overflow: hidden;
+    border-top: 1px dotted #9c3;
+    background-color: #eed;
+}
+
+.faq .q a.trigger {
+    display: block;
+    padding: 10px 0;
+    color: #333;
+    text-align: left;
+    text-decoration: none
+}
+
+.faq .hide .q a.trigger {
+    font-weight: normal;
+    background: none
+}
+
+.faq .q a.trigger:hover,
+.faq .q a.trigger:active,
+.faq .q a.trigger:focus {
+    color: #000
+}

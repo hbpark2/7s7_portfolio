@@ -1,0 +1,400 @@
+        @keyframes headerAni{
+            0%{
+                background-position: 0px 00px;
+            }
+            100%{
+                background-position: 0px -100px;
+            }
+        }
+        .header_back {
+            position: relative;
+            z-index: 1;
+            top: 0;
+            width:100%;
+            height: 300px;
+            background-image: url(../common/images/top_1.png);
+            background-size: 100%;
+            animation-name: headerAni;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+        }
+/*---------------------------------------------------SUB HEADER-----------------------------------------------------*/
+
+        #content {
+            position: relative;
+            top:-140px;
+            z-index: 1;
+            width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        #content>aside,
+        .my_wrap {
+            float: left;
+        }
+
+        aside {
+            width: 300px;
+            height: 1900px;
+            margin-right: 25px;
+            /*            background-color: sandybrown;*/
+        }
+
+        .my_wrap {
+            width: 875px;
+            height: 1900px;
+            overflow: hidden;
+            /*            background-color: seagreen;*/
+        }
+
+        aside>.rank_wrap {
+            width: 250px;
+            height: 470px;
+            padding-right: 50px;
+            /*            background-color: bisque;*/
+        }
+
+        .rank_wrap>.circle {
+            position: relative;
+            top: 30px;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            border-radius: 250px;
+            background-color: #333;
+            color: #eee;
+            font-weight: 700;
+            font-size: 24px;
+            margin: 0 auto;
+        }
+
+        .rank_txt {
+            width: 200px;
+            text-align: center;
+            line-height: 2em;
+            margin: 40px auto 0;
+        }
+        .rank_txt>span {
+            font-weight: 700;
+        }
+
+        .rank_benefit {
+            width: 200px;
+            height: 30px;
+            line-height: 30px;
+            margin: 70px auto 0;
+            border-bottom: 1px solid #333;
+        }
+
+        .rank_benefit>a {
+            font-weight: 700;
+        }
+
+        /*-----------------------------ASIDE RANK---------------------------------*/
+        /*-----------------------------ASIDE LIST---------------------------------*/
+        .aside_li_wrap {
+            width: 240px;
+            height: 1430px;
+            /*            background-color: #eee;*/
+            padding: 50px 30px;
+        }
+
+        .aside_li_wrap>ul {
+            position: relative;
+            z-index: 2;
+            width: 240px;
+            height: 300px;
+        }
+
+        .aside_li_wrap>ul>li {
+            clear: both;
+            height: 50px;
+            line-height: 50px;
+            color: #555;
+            font-size: 16px;
+            font-weight: 500;
+
+        }
+
+        .aside_li_wrap>ul>li:hover>a {
+            background-color: #eed;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .aside_li_wrap>ul>li>a {
+            display: block;
+            width: 240px;
+            height: 50px;
+            line-height: 50px;
+            color: #555;
+            font-size: 16px;
+            font-weight: 500;
+            transition: 0.5s;
+        }
+
+        .aside_li_wrap>ul>li>h3 {
+            font-weight: 700;
+            font-size: 24px;
+            color: #333;
+        }
+
+        /*-----------------ASIDELIST---------------------------*/
+        /*-----------------ARTICLE(MYPAGE)-----------------------*/
+        .mypage_info {
+            width: 875px;
+            height: 500px;
+        }
+
+        .mypage_info_box>span {
+            display: block;
+            width: 875px;
+            height: 100px;
+            margin-top: 20px;
+            line-height: 100px;
+            font-size: 48px;
+            font-weight: 600;
+        }
+
+        .mypage_info_ulbox {
+            width: 875px;
+            height: 200px;
+            margin-top: 50px;
+        }
+
+        .mypage_info_box>ul {
+            width: 875px;
+            height: 200px;
+            margin-top: 50px;
+            overflow: hidden;
+        }
+
+        .mypage_info_box>ul>li {
+            margin-left: 9px;
+            width: 280px;
+            height: 200px;
+            border-radius: 10px;
+            float: left;
+            /*            box-shadow: 5px 5px 5px  rgba(222, 220, 202, 0.5);*/
+        }
+
+        .mypage_info_box>ul>li>p>span {
+            color: #333;
+            font-size: 28px;
+        }
+        .mypage_info_box>ul>li>p:nth-of-type(1) {
+            margin-left: 9px;
+            width: 280px;
+            height: 100px;
+            line-height: 100px;
+            color: #aa9;
+            font-size: 24px;
+            font-weight: 700;
+        }
+        .mypage_info_box>ul>li>p:nth-of-type(2) {
+            margin-left: 9px;
+            width: 270px;
+            padding-right: 10px;
+            height: 100px;
+            line-height: 100px;
+            color: #aa9;
+            text-align: end;
+            font-size: 24px;
+            font-weight: 700;
+        }
+        .mypage_order_box {
+            font-family: 'Nanum Gothic', sans-serif;
+            width: 875px;
+            height: 500px;
+            color: #333;
+            margin-top: 50px
+        }
+        .mypage_order_box> h3{
+            float: left;
+        }
+        .mypage_lately_box>h3{
+            float: left;
+        }
+        .ps_txt {
+            display: block;
+            color: #aaa;
+            font-size: 16px;
+            font-weight: 300;
+            margin-left: 10px;
+        }
+        ps_txt>a{
+            color: #aaa;
+            font-size: 16px;
+
+        }
+        .mypage_order_box>ul:nth-of-type(1) {
+            height: 160px;
+            margin-top: 10px;
+            border-top: 3px solid #aa9;
+            background-color: rgba(150, 150, 100, 0.2);
+            overflow: hidden;
+        }
+
+        .mypage_order_box>ul:nth-of-type(1)>li {
+            font-family: 'Nanum Gothic', sans-serif;
+            text-align: center;
+            width: 140px;
+            height: 140px;
+            margin-left: 5px;
+            color: #333;
+            float: left;
+        }
+
+        .mypage_order_box>ul:nth-of-type(1)>li::after {
+            content: "";
+            position: absolute;
+            top: 475px;
+            margin-left: 70px;
+            width: 2px;
+            height: 100px;
+            background-color: #aa9;
+        }
+
+        .mypage_order_box>ul:nth-of-type(1)>li:nth-of-type(6)::after {
+            content: none;
+
+        }
+
+        .mypage_order_box>ul:nth-of-type(1)>li>p:nth-of-type(1) {
+            font-family: 'Nanum Gothic', sans-serif;
+            text-align: center;
+            width: 140px;
+            height: 80px;
+            line-height: 80px;
+            font-size: 20px;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .mypage_order_box>ul:nth-of-type(1)>li>p:nth-of-type(2) {
+            font-family: 'Nanum Gothic', sans-serif;
+            text-align: center;
+            width: 140px;
+            height: 80px;
+            line-height: 80px;
+            font-size: 36px;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .mypage_order_box>ul:nth-of-type(2) {
+            margin-top: 85px;
+            width: 875px;
+            height: 100px;
+            overflow: hidden;
+            /*            background-color: salmon;*/
+        }
+
+        .mypage_order_box>ul:nth-of-type(2)>li {
+            font-family: 'Nanum Gothic', sans-serif;
+            text-align: center;
+            width: 270px;
+            height: 100px;
+            margin-left: 15px;
+            border: 2px solid #aa9;
+            border-radius: 10px;
+            box-sizing: border-box;
+            color: #333;
+            box-shadow: 5px 5px 5px rgba(220, 220, 202, 0.5);
+            float: left;
+            /*            background-color: sandybrown;*/
+        }
+
+        .mypage_order_box>ul:nth-of-type(2)>li>p {
+            float: left;
+        }
+
+        .mypage_order_box>ul:nth-of-type(2)>li>p:nth-of-type(1) {
+            width: 140px;
+            height: 100px;
+            text-align: start;
+            margin-left: 10px;
+            line-height: 100px;
+            color: #aa9;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .mypage_order_box>ul:nth-of-type(2)>li>p:nth-of-type(2) {
+            width: 100px;
+            height: 100px;
+            text-align: end;
+            margin-right: 10px;
+            line-height: 100px;
+            color: #aa9;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .mypage_order_box>ul:nth-of-type(2)>li>p:nth-of-type(2)>span {
+            color: #887;
+            font-size: 30px;
+        }
+
+        /*----------------------MYPAGE ORDER BOX-----------------------------*/
+        /*----------------------MYPAGE LATELY BOX-----------------------------*/
+        .mypage_lately_box {
+            width: 875px;
+            height: 300px;
+        }
+
+        .mypage_lately_box>h2>span:nth-of-type(2) {
+            display: block;
+            float: right;
+            line-height: 30px;
+            margin-right: 20px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .mypage_lately_box >ul{
+            width: 875px;
+            height: 52px;
+            margin-top: 10px;
+            border-top: 2px solid #aa9;
+            border-bottom: 2px solid #aa9;
+            overflow: hidden;
+        }
+        .mypage_lately_box > ul > li{
+            width: 175px;
+            margin: 0px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: 'Nanum Gothic', sans-serif;
+            border-right: 1px solid #aa9;
+            box-sizing: border-box;
+            float: left;
+        }
+        .mypage_lately_box > ul > li:last-of-type{
+            width: 175px;
+            margin: 0px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            font-size: 14px;
+            font-family: 'Nanum Gothic', sans-serif;
+            border-right: none;
+        }
+        .mypage_lately_box > div{
+            width: 875px;
+            height: 206px;
+            line-height: 206px;
+            text-align: center;
+            font-size: 14px;
+            border-bottom: 1px solid #aa9;
+            box-sizing: border-box;
+        }
+        

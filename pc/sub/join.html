@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flowermood</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <style>
+    
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%:   
+        }
+        body{
+            background-color: #fcfae8;
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+        .wrapper {
+            width: 1200px;
+            height: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            width: 1200px;
+            height: 100px;
+        }
+        @keyframes headerAni{
+            0%{
+                background-position: 0px 00px;
+            }
+            100%{
+                background-position: 0px -100px;
+            }
+        }
+        .header_back {
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            width: 1200px;
+            height: 250px;
+            background-image: url(../Flowermood/about%20us_9.jpg);
+            background-repeat: no-repeat;
+            background-size: 1200px 800px;
+            background-position: 0px -400px;
+            animation-name: headerAni;
+            animation-duration: 7s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+        }
+        .top {
+            position: fixed;
+            height: 100px;
+            z-index: 10;
+            transition: 1s;
+            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .top:hover {
+            background-color: rgba(252, 250, 232, 0.9);
+        }
+        li {
+            list-style: none;
+            float: left;
+            margin-left: 30px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        li>a {
+            font-family: 'Varela Round', sans-serif;
+            font-size: 14px;
+        }
+
+        .login_inner {
+            width: 100%;
+            height: 35px;
+            /*            background-color: #fafafa;*/
+        }
+
+        .login_ul {
+            float: right;
+            width: 1200px;
+            height: 35px;
+        }
+
+        .login_inner>ul>li {
+            float: right;
+            margin-right: 10px;
+            line-height: 30px;
+        }
+
+        .login_inner>ul>li:nth-child(1) {
+            float: right;
+            margin-right: 140px;
+            line-height: 30px;
+        }
+
+        .login_inner>ul>li>a {
+            color: #6b6b6b;
+            text-decoration: none;
+            font-size: 12px;
+            font-family: 'Varela Round', sans-serif;
+        }
+
+        /*------------------------------------------------------------
+        -------------login, defalut setting-----------------------------*/
+        .logo {
+            width: 150px;
+            height: 50px;
+        }
+
+        .nav_inner {
+            width: 1200px;
+            height: 100px;
+        }
+
+        .nav_inner>ul {
+            width: 1000px;
+            height: 100px;
+            margin: 0 auto;
+        }
+
+        .nav_inner>ul>li:nth-child(1) {
+            line-height: 50px;
+            margin-left: 0px;
+        }
+
+        .nav_inner>ul>li {
+            height: 80px;
+            line-height: 50px;
+            margin-left: 70px;
+        }
+        .nav_inner>ul>li>.underline{
+            position: relative;
+            top:-15px;
+            left:-2px;
+            width: 0px;
+            height: 1px;
+            background-color: #fff;
+            transition: 0.5s;
+        }
+        .nav_inner>ul>li:hover .underline{
+            width: 100%;
+            height: 1px;
+            background-color: #6b6b6b;
+        }
+        .nav_inner>ul>li:nth-of-type(1):hover .hide_1{
+            opacity: 1;
+            display: block;
+        }
+        .hide_1:hover{
+            opacity: 1;
+            display: block;
+        }
+        .hide_1{
+            width: 1000px;
+            height:300px;
+            background-color: rgba(252, 250, 232, 0.9);
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            transition: 1s;
+            opacity: 0;
+            display: none;
+            border-radius: 50px;
+            overflow: hidden;
+        }
+        .hide_1 > div > img{
+            display: block;
+            float: left;
+            width:250px;
+            height:300px;
+            opacity: 0.7;
+        }
+        .hide_1 > p{
+            width: 500px;
+            height: 50px;
+            margin:15px;
+            margin-left: 300px;
+            color: #333;
+            font-size: 20px;
+            font-weight: 600;
+            transition: 0.5s;
+            border-radius: 25px;
+        }
+        .hide_1 > p:hover{
+            width: 500px;
+            height: 50px;
+            margin:15px;
+            margin-left: 300px;
+            color: #000;
+            font-size: 21px;
+            font-weight: 600;
+            background-color: rgba(232, 230, 202, 0.9);
+            border-radius: 25px;
+        }
+        
+        .nav_inner>ul>li:nth-of-type(2):hover .hide_2{
+            opacity: 1;
+            display: block;
+        }
+        
+        .hide_2{
+            width: 1000px;
+            height:300px;
+            background-color:  rgba(252, 250, 232, 0.9);
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            transition: 1s;
+            opacity: 0;
+            display: none;
+            border-radius: 50px;
+            overflow: hidden;
+        }
+        .hide_2 > div > img{
+            display: block;
+            float: left;
+            width:250px;
+            height:300px;
+            opacity: 0.7;
+        }
+        .hide_2 > p{
+            width: 500px;
+            height: 50px;
+            margin:15px;
+            margin-left: 300px;
+            color: #333;
+            font-size: 20px;
+            font-weight: 600;
+            transition: 0.5s;
+        }
+        .hide_2 > p:hover{
+            width: 500px;
+            height: 50px;
+            margin:15px;
+            margin-left: 300px;
+            color: #000;
+            font-size: 21px;
+            font-weight: 600;
+            background-color: rgba(232, 230, 202, 0.9);
+            border-radius: 25px;
+        }
+        .hide_2:hover{
+            opacity: 1;
+            display: block;
+        }
+        /*---------------------------------------------------------------*/
+        section{
+            position: relative;
+            z-index: 5;
+            width: 1200px;
+            height:200px;
+/*            background-color:antiquewhite; */
+            margin: 0 auto;
+        }
+        .joinus_box{
+            position: relative;
+            width:1200px;
+            height: 300px;
+            left: 50%;
+            margin-left: -600px;
+        }
+        .joinus_box > h1{
+            width:1200px;
+            height: 100px;
+            font-size: 48px;
+            font-weight: 600;
+            margin-top: 40px;
+            text-align: center;
+            color: #333;
+        }
+        .joinus_box > h2{
+            width:1200px;
+            height: 100px;
+            line-height: 100px;
+            font-size: 20px;
+            color: #887;
+        }
+        h3{
+            width: 1200px;
+            height: 80px;
+            line-height: 80px;
+        }
+        /*---------------JOINUSBOX-----------------*/
+        form{
+            width: 1200px;
+            height: 1200px;
+            margin: 0 auto;
+        }
+        fieldset{
+            width: 1200px;
+            height: 80px;
+            border: none;
+            border-bottom: 1px solid #dcdcdc;
+            line-height: 80px;
+        }
+        fieldset:nth-of-type(1){
+            border-top:  1px solid #dcdcdc;
+        }
+        label{
+            display: block;
+            float: left;
+            width:150px;
+            height: 70px;
+            font-size: 16px;
+            font-weight: 700;
+            
+        }
+        input{
+            display: block;
+            float: left;
+            margin-top: 10px;
+            margin-left: 30px;
+            width:400px;
+            height: 60px;
+            font-size: 20px;
+            box-sizing: border-box;
+/*            border: 1px solid #dcdcdc;*/
+            border: none;
+            background-color: #eed;
+            text-align: center;
+            margin-right: 0px;
+        }
+        input[type="checkbox"]{
+            clear: both;
+            width: 20px;
+            height: 20px;
+            margin-left: 180px;
+            margin-top: 15px;
+        }
+        input[type="button"]{
+            width: 200px;
+            height: 60px;
+            font-size: 18px;
+            font-weight: 100;
+            color: #fff;
+            background-color: #333;
+        }
+        input[type="reset"]{
+            width: 400px;
+            height: 100px;
+            font-size: 16px;
+            font-weight: 500;
+            color: #333;
+            background-color: #eed;
+            border: none;
+            box-sizing: border-box;
+        }
+        input[type="submit"]{
+            width: 400px;
+            height: 100px;
+            font-size: 16px;
+            font-weight: 500;
+            color: #eed;
+            background-color: #333;
+            box-sizing: border-box;
+        }
+        
+        .adtxt{
+            display: block;
+            width:500px;
+            height: 10px;
+            float: left;
+            margin-top: -35px;
+            margin-left: 10px;
+            font-weight: 300;
+            color: #444444;
+        }
+        select{
+            display: block;
+            float: left;
+            margin-top: 15px;
+            margin-left: 30px;
+            width:200px;
+            height: 60px;
+            font-size: 16px;
+            box-sizing: border-box;
+            border:none;
+            text-align: center;
+            background-color: #eed;
+        }
+        option{
+            text-align: center;
+        }
+        .star{
+            color: crimson;
+        }
+        .pemail{
+            height: 120px;
+            line-height: 120px;
+        }
+        .pemail_txt{
+            margin-top: 15px;
+        }
+        .large{
+            height: 220px;
+            line-height: 220px;
+        }
+        .adress{
+            display: block;
+            float: left;
+        }
+        .bb{
+            clear: both;
+            width: 630px;
+        }
+        .adbox{
+            width: 900px;
+            height: 220px;
+            margin-left: 150px;
+        }
+        .ptxt{
+            display: block;
+            width:500px;
+            height: 10px;
+            float: left;
+            margin-top: -35px;
+            margin-left: 10px;
+            font-weight: 300;
+            color: #444444;
+        }
+        .sbmit{
+            width: 900px;
+            margin: 0 auto;
+            margin-top: 30px;
+        }
+        .adimg{
+            width: 20px;
+            height: 20px;
+            float: left;
+            margin-top: 12px;
+            margin-left: 180px;
+            background-image: url(../../../imgs/check_1.png);
+            background-repeat: no-repeat;
+        
+        }
+        #ptel{
+            margin-right: 500px;
+        }
+        #check_2{
+            display: none;
+        }
+        #check_1{
+            display: none;
+        }
+        input[type="checkbox"]:checked + .adimg{
+            background-image: url(../../../imgs/check_2.png);
+            background-repeat: no-repeat;
+        }
+        .imgbox{
+            width: 800px;
+        }
+/*-------------------------------------------------------------------------*/        
+        
+        footer {
+            position: relative;
+            top: 00px;
+            width: 1200px;
+            height: 400px;
+        }
+        .footer_logo_wrap{
+            width:1200px;
+            height: 100px;
+            padding: 20px;
+        }
+        .footer_logo_wrap > img{
+            display: block;
+            width: 250px;
+            height:100px;
+        }
+        .st_big{
+            width: 250px;
+            height:30px;
+            line-height: 30px;
+            color: #333;
+            font-size: 20px;
+        }
+        .st_small{
+            width: 250px;
+            height:30px;
+            line-height: 30px;
+            color: #333;
+            font-size: 14px;
+        }
+        
+        .stbox{
+            float: left;
+        }
+        .st_box_1{
+            position: relative;
+            z-index: 1;
+        }
+        .st_box_2{
+            position: relative;
+            z-index: 1;
+            width: 350px;
+            height: 250px;
+            margin-left: 20px;
+        }
+        .st_box_2 > p{
+            line-height: 30px;
+            color: #333;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        @keyframes glassAni{
+            0%{
+                -webkit-transform: rotate(0deg);
+            }
+            100%{
+                -webkit-transform: rotate(10deg);
+            }
+        }
+        .st_box_3{
+            overflow: hidden;
+            position: absolute;
+/*            left:1050px;*/
+            width: 1200px;
+            height:400px;
+            opacity: 0.5;
+        }
+        .st_box_3 > img:nth-of-type(1){
+            position: absolute;
+            top: -30px;
+            display: block;
+            float: left;
+            width: 400px;
+            height:250px;
+            transform-origin: 0% 0%;
+            animation-name: glassAni;
+            animation-duration: 3s;
+            animation-direction: alternate;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+        }
+        .st_box_3 > img:nth-of-type(2){
+            position: absolute;
+            top: -30px;
+            left: 200px;
+            width: 400px;
+            height:250px;
+            transform-origin: 0% 0%;
+            animation-name: glassAni;
+            animation-duration: 3s;
+            animation-direction: alternate;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+        }
+        .st_box_3 > img:nth-of-type(3){
+            position: relative;
+            top: -80px;
+            left: 400px;
+            width: 400px;
+            height:250px;
+            transform-origin: 0% 0%;
+            animation-name: glassAni;
+            animation-duration: 3s;
+            animation-direction: alternate;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+        }
+        .st_box_3 > img:nth-of-type(4){
+            position: relative;
+            top: 150px;
+            left: 450px;
+            width: 300px;
+            height:300px;
+        }
+    </style>
+</head>
+<body>
+  <div class="wrapper">
+   <header>
+            <div class="top">
+                <div class="login_inner">
+                    <ul class="login_ul">
+                        <li><a href="">search</a></li>
+                        <li><a href="">login</a></li>
+                        <li><a href="">sign up</a></li>
+                    </ul>
+                </div>
+
+                <nav>
+                    <div class="nav_inner">
+                        <ul>
+                            <li>
+                                <a href="abPtype.html">ABOUT US</a>
+                                <div class="underline"></div>
+                                <div class="hide_1">
+                                    <div class="hide_img"><img src="../Flowermood/about_us_6.jpg" alt=""></div>
+                                    <p><a href="">&#8226; ABOUT US</a></p>
+                                    <p><a href="">&#8226; LOCATION</a></p>
+                                </div>
+                            </li>
+                            <li><a href="online_store.html">ONLINE STORE</a>
+                                <div class="underline"></div>
+                                <div class="hide_2">
+                                    <div class="hide_2_img"><img src="../Flowermood/about_us_5.jpg" alt=""></div>
+                                    
+                                    <p><a href="">&#8226; ALL</a></p>
+                                    <p><a href="">&#8226; 선인장/다육식물</a></p>
+                                    <p><a href="">&#8226; 행잉식물</a></p>
+                                    <p><a href="">&#8226; 공기정화식물</a></p>
+                                    
+                                </div>
+                            </li>
+                            <li><a href="">COLLECTION</a>
+                                <div class="underline"></div>
+                            </li>
+                            <li>
+                                <div class="logo_wrap">
+                                    <a href="../ptype.html">
+                                        <img class="logo" src="../Flowermood/flowerMood_size.png" alt="">
+                                    </a>
+                                </div>
+                            </li>
+                            <li><a href="board_FAQ.html">BOARD</a>
+                                <div class="underline"></div>
+                            </li>
+                            <li><a href="mypage.html">MYPAGE</a>
+                                <div class="underline"></div>
+                            </li>
+                            <li><a href="cart.html">CART</a>
+                                <div class="underline"></div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+    <div class="header_back"></div>
+    <section>
+        
+        <article class="joinus_box">
+            <h1>Join Us</h1>      
+        </article>
+        
+    </section>
+             
+    <form action="" name="frm_1">
+       <h3>Flowermood 회원가입</h3> 
+        <h3>회원정보</h3>             
+        <fieldset>
+            <label for="pname"><span class="star">&nbsp;&nbsp;&nbsp;*</span>이름</label>
+            <input type="text" id="pname" name="pname">
+        </fieldset>    
+        
+        <fieldset class="pemail" id="pemail">
+            <label for="ptel"><span class="star">&nbsp;&nbsp;&nbsp;*</span>휴대폰번호</label>
+            <input type="tel" id="ptel" name="ptel" placeholder="'-'없이 입력하세요">
+            <div class="imgbox">
+            <input type="checkbox" id="check_1" name="check_1">
+            <label class="adimg" for="check_1" ></label>
+            <label for="check_1" class="adtxt">정보/이벤트 SMS 수신에 동의합니다.</label>
+            </div>
+        </fieldset>  
+               
+        <fieldset>
+            <label for="pid"><span class="star">&nbsp;&nbsp;&nbsp;*</span>아이디</label>
+            <input type="text" id="pid" name="pid">
+        </fieldset>   
+        
+        <fieldset>
+            <label for="ppw"><span class="star">&nbsp;&nbsp;&nbsp;*</span>비밀번호</label>
+            <input type="password" id="ppw" name="ppw">
+        </fieldset>
+        
+        <fieldset>
+            <label for="ppwc"><span class="star">&nbsp;&nbsp;&nbsp;*</span>비밀번호 확인</label>
+            <input type="password" id="ppwc" name="ppwc">
+        </fieldset>           
+                
+        <fieldset class="pemail">
+            <label for="pad"><span class="star">&nbsp;&nbsp;&nbsp;*</span>이메일</label>
+            <input class="pemail_txt" type="text" id="pad" name="pad">
+            
+            <select name="pemail" id="pemail">
+                
+                <option value="http://www.naver.com">네이버</option>
+                <option value="http://www.google.com">구글</option>
+                <option value="http://www.daum.net">다음</option>
+                
+            </select>
+            <div class="imgbox">
+            <input type="checkbox" id="check_2" name="check_2">
+            <label class="adimg" for="check_2" ></label>
+            <label for="check_2" class="adtxt">정보/이벤트 SMS 수신에 동의합니다.</label>
+            </div>
+        </fieldset>
+        <fieldset class="large">
+            <label for="padress"><span class="star">&nbsp;&nbsp;&nbsp;*</span>주소</label>
+            <div class="adbox">
+            <input class="adress aa" type="text" id="padress" name="padress">
+            <input type="button" value="우편번호검색">
+            <input class="adress bb" type="text" id="padress" name="padress">
+            <input class="adress bb" type="text" id="padress" name="padress">
+            </div>
+        </fieldset>    
+        <div class="sbmit">
+        <input type="reset" value="가입취소">
+        <input type="submit" value="가입하기">
+        </div>
+    </form>   
+    <footer>
+            <div class="stbox footer_logo_wrap">
+<!--                <a href="">-->
+                    <img class="logo" src="../Flowermood/flowerMood_size.png" alt="">
+<!--                </a>-->
+            </div>
+            
+            <div class="stbox st_box_1">
+                <p class="st_big">010-2223-0833</p>
+                <p class="st_small">OPENING HOURS. AM10:00~PM20:00</p>
+                <p class="st_small">LUNCH BREAK. PX13:00~PM14:00</p> 
+                <p class="st_small">MON OFF</p>      
+            </div>
+
+           <div class="stbox st_box_2">
+                <p>COMPANY <b>Flowermood</b></p>
+                <p>OWNER&amp;ADMIN <b>Jake</b></p> 
+                <p>BUSINESS NO. <b>212-6541-004562</b></p>
+                <p>ONLINE-ORDER NO. <b>제 2018-용인기흥-0004호</b></p>
+                <p>ADRESS <b>경기도 용인시 기흥구 구갈동 366-6</b></p>  
+                <p>TEL <b>010-2223-0833</b></p>      
+                <p>EMAIL <b>hbpark2@gmail.com</b></p>  
+                <p><a href="../mobile/index.html"><b>mobile.ver</b></a></p>  
+           </div>
+           
+           <div class="stbox st_box_3">
+               <img src="../Flowermood/banner_knew.png" alt="">
+
+           </div>
+           
+           <div class="stbox st_box_4">
+               
+           </div>
+           
+           <div class="stbox st_box_5">
+               
+           </div>
+       
+       
+        </footer>
+    </div>
+</body>
+</html>

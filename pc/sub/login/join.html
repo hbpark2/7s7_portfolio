@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>flowermood</title>
+    <link rel="stylesheet" href="../common/css/common.css">
+    <link rel="stylesheet" href="join.css">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="skipNav">
+        <a href="#content">본문 바로가기</a>
+        <a href="#gnb">글로벌네비게이션 바로가기</a>
+    </div>
+    <div class="wrapper">
+        <!-- 헤더 삽입 영역 START-->
+
+            <? include "../common/data/header.html" ?>
+
+        <!-- 헤더 삽입 영역 END-->
+
+        
+        <div class="header_back"></div>
+        
+        <div id="content">
+            <h2 class="tit">Flowermood 회원가입</h2>
+
+            <form action="" name="frm_1">
+                <fieldset>
+                    <label for="pname"><span class="star">&nbsp;&nbsp;&nbsp;*</span>이름</label>
+                    <input type="text" id="pname" name="pname">
+                </fieldset>
+
+                <fieldset>
+                    <label for="ptel"><span class="star">&nbsp;&nbsp;&nbsp;*</span>휴대폰번호</label>
+                    <input type="tel" id="ptel" name="ptel" placeholder="'-'없이 입력하세요">
+                    <input type="checkbox" id="check_1">
+                    <label for="check_1" class="adtxt">정보/이벤트 SMS 수신에 동의합니다.</label>
+                        
+                </fieldset>
+
+                <fieldset>
+                    <label for="pid"><span class="star">&nbsp;&nbsp;&nbsp;*</span>아이디</label>
+                    <input type="text" id="pid" name="pid">
+                </fieldset>
+
+                <fieldset>
+                    <label for="ppw"><span class="star">&nbsp;&nbsp;&nbsp;*</span>비밀번호</label>
+                    <input type="password" id="ppw" name="ppw">
+                </fieldset>
+
+                <fieldset>
+                    <label for="ppwc"><span class="star">&nbsp;&nbsp;&nbsp;*</span>비밀번호 확인</label>
+                    <input type="password" id="ppwc" name="ppwc">
+                </fieldset>
+
+                <fieldset>
+                    <label for="pad"><span class="star">&nbsp;&nbsp;&nbsp;*</span>이메일</label>
+                    <input class="pemail_txt" type="text" id="pad" name="pad">
+                    <span>&#64;</span>    
+                    <select name="pemail" id="pemail">
+
+                        <option value="http://www.naver.com">네이버</option>
+                        <option value="http://www.google.com">구글</option>
+                        <option value="http://www.daum.net">다음</option>
+
+                    </select>
+                        <input type="checkbox" id="check_2">
+                        <label for="check_2" class="adtxt">정보/이벤트 SMS 수신에 동의합니다.</label>
+                </fieldset>
+                <fieldset>
+                    <label for="padress"><span class="star">&nbsp;&nbsp;&nbsp;*</span>주소</label>
+                    <div class="adbox">
+                        <input class="adress" type="text" id="padress" name="padress">
+                        <input type="button" value="우편번호검색">
+                        <input class="adress bb" type="text" id="padress" name="padress">
+                        <input class="adress bb" type="text" id="padress" name="padress">
+                    </div>
+                </fieldset>
+                
+                <div class="submit_box">
+                    <input type="reset" value="가입취소">
+                    <input type="submit" value="가입하기">
+                </div>
+            </form>
+
+        </div>
+
+        <footer>
+            <h3 class="hidden">푸터 영역</h3>
+            <div class="footer_wrapper">
+                <div class="footer_box">
+                    <img class="logo" src="../common/images/logo.png" alt="로고이미지">
+                    <ul class="footer_text">
+                        <li>OPENING HOURS. AM10:00~PM20:00</li>
+                        <li>LUNCH BREAK. PX13:00~PM14:00</li>
+                        <li>MON OFF</li>
+                        <li>010-2223-0833</li>
+                        <li><a href="../mobile/index.html"><b>mobile.ver</b></a></li>
+                    </ul>
+                </div>
+                <ul class="footer_box footer_text">
+                    <li>COMPANY <b>Flowermood</b></li>
+                    <li>OWNER&amp;ADMIN <b>Jake</b></li>
+                    <li>BUSINESS NO. <b>212-6541-004562</b></li>
+                    <li>ONLINE-ORDER NO. <b>제 2018-용인기흥-0004호</b></li>
+                    <li>ADRESS <b>경기도 용인시 기흥구 구갈동 366-6</b></li>
+                    <li>TEL <b>010-2223-0833</b></li>
+                    <li>EMAIL <b>hbpark2@gmail.com</b></li>
+                </ul>
+            </div>
+
+        </footer>
+    </div>
+    <script src="../../../js/jquery-1.12.4.min.js"></script>
+    <script src="../../../js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="../../../js/jquery-ui.min.js"></script>
+    <script src="../../nav_js.js"></script>
+</body>
+
+</html>

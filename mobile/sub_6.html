@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="formet-detection" content="telephone=no">
+
+
+    <title>flowermood</title>
+
+    <link rel="apple-touch-icon-precomposed" href="app_icon.png">
+    <link rel="apple-touch-startup-image" href="startup.png">
+    <link rel="stylesheet" href="sub/common.css">
+    <link rel="stylesheet" href="sub/sub_5.css">
+    <!-- 폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
+    <!-- 폰트 -->
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="js/prefixfree.min.js"></script>
+    <script src="sub/common.js"></script>
+
+
+
+
+    <!--[if lt IE 9]> 
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+    <!--[if lt IE 9]>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+
+
+</head>
+
+<body>
+    <!--skipNav-->
+    <div id="skipNav">
+        <a href="#content">본문 바로가기</a>
+        <a href="#gnb">글로벌네비게이션 바로가기</a>
+    </div>
+
+    <!--skipNav-->
+    <div id="wrap">
+
+        <!--헤더 삽입 영역-->
+        <? include "common/subheader.html" ?>
+        <!--헤더 삽입 영역-->
+
+        <article id="content">
+            <h2 class="hidden">본문 컨텐츠</h2>
+            <h3 class="tit">회원가입</h3>
+
+            
+            <form action="">
+                
+                <fieldset>
+                    <label for="pname">이름</label>
+                    <input id="pname" name="pname" type="text">
+                </fieldset>
+                
+                <fieldset>
+                    <label for="pid">USER ID</label>
+                    <input id="pid" name="pid" type="text">
+                </fieldset>
+                
+                <fieldset>
+                    <label for="pw">PASSWORD</label>
+                    <input id="pw" name="pw" type="password">
+                </fieldset>
+                
+                 <fieldset>
+                    <label for="pw2">CHECK PASSWORD</label>
+                    <input id="pw2" name="pw2" type="password">
+                </fieldset>
+                
+                <fieldset>
+                    <label for="pphone">PHONENUMBER</label>
+                    <input id="pphone" name="pphone" type="text">
+                </fieldset>
+                
+                <fieldset class="email">
+                    <label for="pemail">E-MAIL</label>
+                    <input id="pemail" name="pemail" type="text"><span>&#64;</span>
+                    <select name="pemail2" id="pemail2">
+                        <option value="naver.com">naver.com</option>
+                        <option value="google.com">google.com</option>
+                        <option value="nate.com">nate.com</option>
+                    </select>
+                </fieldset>
+                
+                
+            </form>
+            
+
+
+        </article>
+
+        <!-- 푸터 삽입 영역 START-->
+
+        <? include "common/footer.html" ?>
+
+        <!-- 푸터 삽입 영역 END-->
+    </div>
+    <script src="https://kit.fontawesome.com/e39232b629.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

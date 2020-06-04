@@ -1,0 +1,116 @@
+        .headline {
+            position: relative;
+            top: 100px;
+            width: 1200px;
+            height: 500px;
+            margin: 0 auto;
+            /*            background-color: salmon;*/
+
+
+        }
+
+        .headline > img {
+            position: relative;
+            width: 1000px;
+            top: -100px;
+            left: 50%;
+            margin-left: -500px;
+            opacity: 0.7;
+        }
+
+        .headline_txt {
+            display: block;
+            position: relative;
+            top: -350px;
+            text-align: center;
+            color: #887;
+            font-size: 100px;
+            font-family: 'Dancing Script', cursive;
+            font-weight: 500;
+        }
+
+        .about {
+            color: #700
+        }
+/***********************************************************************************************************/
+#content{
+    
+    font-family: 'Nanum Gothic', sans-serif;
+
+}
+.s2_txt{
+    opacity: 0;
+    transition: all 1s;
+}
+#s3{
+    opacity: 0;
+    transition: all 1s;
+}
+#s2_txt{
+    width:96%;
+    margin: 0 auto;
+}
+.sub_tit{
+    font-size: 24px;
+    padding: 20px 0;
+    margin-top: 50px;
+    text-align: center;
+
+}
+.sub_p{
+    font-size: 20px;
+    padding: 20px 0;
+    margin-bottom: 50px;
+    line-height: 1.8em;
+    text-align: center;
+}
+.storeimg{
+    width: 100%;
+}
+#s3{
+    margin: 100px auto;
+}
+#s3 ul{
+    overflow: hidden;
+}
+#s3 li{
+    width:50%;
+}
+.s3_left{
+    float: left;
+}
+.s3_left img{
+    width: 100%;
+}
+.s3_right{
+    margin-left: 55%;
+}
+.s3_right p{
+    font-size: 20px;
+    line-height: 1.8em;
+}
+.s3_right a{
+    position: relative;
+    display: block;
+    width:200px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    border: 1px solid #333;
+    margin: 50px 0;
+    transition: all .5s;
+    bottom: 0;
+}
+.s3_right a:hover{
+    bottom: 10px;
+    background-color: #eed;
+    border-color: #eed;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+}
+.s3_right > dl > dt {
+    margin: 10px 0;
+}
+
+.s3_right > dl > dd {
+    margin-bottom: 15px;
+}

@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>board</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%:
+        }
+
+        body {
+            background-color: #fcfae8;
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+
+        .wrapper {
+            width: 1200px;
+            height: 1500px;
+            margin: 0 auto;
+        }
+
+        header {
+            width: 1200px;
+            height: 100px;
+        }
+
+        @keyframes headerAni {
+            0% {
+                background-position: 0px 00px;
+            }
+
+            100% {
+                background-position: 0px -100px;
+            }
+        }
+
+        .header_back {
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            width: 1200px;
+            height: 250px;
+            background-image: url(../Flowermood/about%20us_9.jpg);
+            background-repeat: no-repeat;
+            background-size: 1200px 800px;
+            background-position: 0px -400px;
+            animation-name: headerAni;
+            animation-duration: 7s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+        }
+
+        .top {
+            position: fixed;
+            height: 100px;
+            z-index: 10;
+            transition: 1s;
+            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .top:hover {
+            background-color: rgba(252, 250, 232, 0.9);
+        }
+
+        li {
+            list-style: none;
+            float: left;
+            margin-left: 30px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        li>a {
+            font-family: 'Varela Round', sans-serif;
+            font-size: 14px;
+        }
+
+        .login_inner {
+            width: 100%;
+            height: 35px;
+            /*            background-color: #fafafa;*/
+        }
+
+        .login_ul {
+            float: right;
+            width: 1200px;
+            height: 35px;
+        }
+
+        .login_inner>ul>li {
+            float: right;
+            margin-right: 10px;
+            line-height: 30px;
+        }
+
+        .login_inner>ul>li:nth-child(1) {
+            float: right;
+            margin-right: 140px;
+            line-height: 30px;
+        }
+
+        .login_inner>ul>li>a {
+            color: #6b6b6b;
+            text-decoration: none;
+            font-size: 12px;
+            font-family: 'Varela Round', sans-serif;
+        }
+
+        /*------------------------------------------------------------
+        -------------login, defalut setting-----------------------------*/
+        .logo {
+            width: 150px;
+            height: 50px;
+        }
+
+        .nav_inner {
+            width: 1200px;
+            height: 100px;
+        }
+
+        .nav_inner>ul {
+            width: 1000px;
+            height: 100px;
+            margin: 0 auto;
+        }
+
+        .nav_inner>ul>li:nth-child(1) {
+            line-height: 50px;
+            margin-left: 0px;
+        }
+
+        .nav_inner>ul>li {
+            height: 80px;
+            line-height: 50px;
+            margin-left: 70px;
+        }
+
+        .nav_inner>ul>li>.underline {
+            position: relative;
+            top: -15px;
+            left: -2px;
+            width: 0px;
+            height: 1px;
+            background-color: #fff;
+            transition: 0.5s;
+        }
+
+        .nav_inner>ul>li:hover .underline {
+            width: 100%;
+            height: 1px;
+            background-color: #6b6b6b;
+        }
+
+        .nav_inner>ul>li:nth-of-type(1):hover .hide_1 {
+            opacity: 1;
+            display: block;
+        }
+
+        .hide_1:hover {
+            opacity: 1;
+            display: block;
+        }
+
+        .hide_1 {
+            width: 1000px;
+            height: 300px;
+            background-color: rgba(252, 250, 232, 0.9);
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            transition: 1s;
+            opacity: 0;
+            display: none;
+            border-radius: 50px;
+            overflow: hidden;
+        }
+
+        .hide_1>div>img {
+            display: block;
+            float: left;
+            width: 250px;
+            height: 300px;
+            opacity: 0.7;
+        }
+
+        .hide_1>p {
+            width: 500px;
+            height: 50px;
+            margin: 15px;
+            margin-left: 300px;
+            color: #333;
+            font-size: 20px;
+            font-weight: 600;
+            transition: 0.5s;
+            border-radius: 25px;
+        }
+
+        .hide_1>p:hover {
+            width: 500px;
+            height: 50px;
+            margin: 15px;
+            margin-left: 300px;
+            color: #000;
+            font-size: 21px;
+            font-weight: 600;
+            background-color: rgba(232, 230, 202, 0.9);
+            border-radius: 25px;
+        }
+
+        .nav_inner>ul>li:nth-of-type(2):hover .hide_2 {
+            opacity: 1;
+            display: block;
+        }
+
+        .hide_2 {
+            width: 1000px;
+            height: 300px;
+            background-color: rgba(252, 250, 232, 0.9);
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            transition: 1s;
+            opacity: 0;
+            display: none;
+            border-radius: 50px;
+            overflow: hidden;
+        }
+
+        .hide_2>div>img {
+            display: block;
+            float: left;
+            width: 250px;
+            height: 300px;
+            opacity: 0.7;
+        }
+
+        .hide_2>p {
+            width: 500px;
+            height: 50px;
+            margin: 15px;
+            margin-left: 300px;
+            color: #333;
+            font-size: 20px;
+            font-weight: 600;
+            transition: 0.5s;
+        }
+
+        .hide_2>p:hover {
+            width: 500px;
+            height: 50px;
+            margin: 15px;
+            margin-left: 300px;
+            color: #000;
+            font-size: 21px;
+            font-weight: 600;
+            background-color: rgba(232, 230, 202, 0.9);
+            border-radius: 25px;
+        }
+
+        .hide_2:hover {
+            opacity: 1;
+            display: block;
+        }
+
+        /*-------------------------HEADER-----------------------------------*/
+        /*-------------------------SECTION-----------------------------------*/
+        section {
+            position: absolute;
+            width: 1200px;
+            height: 1200px;
+        }
+        #login_back{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 1920px;
+            height: 1000px;
+            background-color: rgba(0,0,0,0.5);
+        }
+        .login_section {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -225px;
+            margin-left: -400px;
+            width: 800px;
+            height: 450px;
+            background-color: rgba(202, 200, 182, 0.9);
+
+        }
+        
+        .login_title{
+            width: 100%;
+            height: 120px;
+/*            background-color: rgba(202, 200, 182, 0.9);*/
+        }
+        .login_section > .login_title >h1 {
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 20px;
+            color: #333;
+        }
+        .st_3 {
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            font-size: 14px;
+            color: #887;
+            
+        }
+        
+        fieldset{
+            border: none;
+            
+        }
+        
+        input{
+            width:350px;
+            height: 50px;
+            margin-left: 150px;
+            margin-top: 10px;
+            background-color: #fcfae8;
+            border: 1px solid #aa9;
+            box-sizing: border-box;
+            font-weight: 600;
+            color: #aa9;
+        }
+        input[type="submit"]{
+            position: absolute;
+            top: 120px;
+            left: 370px;
+            display: block;
+            width: 150px;
+            height: 110px;
+            background-color: #887;
+            color: #ddc;
+            font-size: 18px;
+        }
+        .login_bottom{
+            position: relative;
+            left: 150px;
+            width: 520px;
+            height: 50px;
+            margin-top: 10px;
+        }
+        .login_bottom > p{
+            color: #333;
+            font-size: 14px;
+            height: 20px;
+            line-height: 20px;
+            float: left;
+            font-weight: 600;
+        }
+        .login_bottom > p:nth-of-type(2){
+            margin-left: 10px;
+        }
+        .login_bottom > p > span > img{
+            margin-top: 15px;
+            width: 20px;
+            height: 12px;
+        }
+        .login_bottom > div{
+            clear: both;
+            position: relative;
+            top: 40px;
+            width: 520px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+            border-top: 1px solid #333;
+        }
+        .login_bottom > div > p:nth-of-type(1){
+            margin-top: 10px;
+        }
+        .login_bottom > div > p:nth-of-type(2){
+            float: left;
+        }
+        input[type="button"]{
+            position: relative;
+            top: -30px;
+            left: 65px;
+            width: 150px;
+            height: 50px;
+            background-color: #887;
+            color: #ddc;
+        }
+        
+        
+        /*--------------------------------------------------*/
+        footer {
+            position: relative;
+            top: 1100px;
+            width: 1200px;
+            height: 400px;
+        }
+
+        .footer_logo_wrap {
+            width: 1200px;
+            height: 100px;
+            padding: 20px;
+        }
+
+        .footer_logo_wrap>img {
+            display: block;
+            width: 250px;
+            height: 100px;
+        }
+
+        .st_big {
+            width: 250px;
+            height: 30px;
+            line-height: 30px;
+            color: #333;
+            font-size: 20px;
+        }
+
+        .st_small {
+            width: 250px;
+            height: 30px;
+            line-height: 30px;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .stbox {
+            float: left;
+        }
+
+        .st_box_1 {
+            position: relative;
+            z-index: 1;
+        }
+
+        .st_box_2 {
+            position: relative;
+            z-index: 1;
+            width: 350px;
+            height: 250px;
+            margin-left: 20px;
+        }
+
+        .st_box_2>p {
+            line-height: 30px;
+            color: #333;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        @keyframes glassAni {
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(10deg);
+            }
+        }
+
+        .st_box_3 {
+            overflow: hidden;
+            position: absolute;
+            /*            left:1050px;*/
+            width: 1200px;
+            height: 400px;
+            opacity: 0.5;
+        }
+
+        .st_box_3>img:nth-of-type(1) {
+            position: absolute;
+            top: -30px;
+            display: block;
+            float: left;
+            width: 400px;
+            height: 250px;
+            transform-origin: 0% 0%;
+            animation-name: glassAni;
+            animation-duration: 3s;
+            animation-direction: alternate;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+        }
+
+        .st_box_3>img:nth-of-type(2) {
+            position: absolute;
+            top: -30px;
+            left: 200px;
+            width: 400px;
+            height: 250px;
+            transform-origin: 0% 0%;
+            animation-name: glassAni;
+            animation-duration: 3s;
+            animation-direction: alternate;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+        }
+
+        .st_box_3>img:nth-of-type(3) {
+            position: relative;
+            top: -80px;
+            left: 400px;
+            width: 400px;
+            height: 250px;
+            transform-origin: 0% 0%;
+            animation-name: glassAni;
+            animation-duration: 3s;
+            animation-direction: alternate;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+        }
+
+        .st_box_3>img:nth-of-type(4) {
+            position: relative;
+            top: 150px;
+            left: 450px;
+            width: 300px;
+            height: 300px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="login_back">
+            <div class="login_section">
+                <div class="login_title">
+                    <h1>MEMBER LOGIN</h1>
+                    <p class="st_3">가입 시 입력하신 아이디와 비밀번호로 로그인이 가능합니다.</p>
+                </div>
+                
+                <fieldset>
+                    <input type="text" placeholder="  ID">
+                    <input type="password" placeholder="  PASSWORD">
+                    <input type="submit" value="로그인">
+                    
+                </fieldset>
+                
+                <div class="login_bottom">
+                    <p>
+                    <span><img src="../Flowermood/1x/check.png" alt=""></span>
+                    아이디 찾기
+                    </p>
+                    <p>
+                    <span><img src="../Flowermood/1x/check.png" alt=""></span>
+                    비밀번호 찾기
+                    </p>
+                    
+                    <div>
+                       <p>회원가입시 다양하고 특별한</p>
+                       <p>혜택이 준비되어 있습니다.</p>
+                        <input type="button" value="회원가입">
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+    <div class="wrapper">
+        <header>
+            <div class="top">
+                <div class="login_inner">
+                    <ul class="login_ul">
+                        <li><a href="">search</a></li>
+                        <li><a href="">login</a></li>
+                        <li><a href="flowermood_etc/join.html">sign up</a></li>
+                    </ul>
+                </div>
+
+                <nav>
+                    <div class="nav_inner">
+                        <ul>
+                            <li>
+                                <a href="flowermood_etc/about_us.html">ABOUT US</a>
+                                <div class="underline"></div>
+                                <div class="hide_1">
+                                    <div class="hide_img"><img src="../Flowermood/about_us_6.jpg" alt=""></div>
+                                    <p><a href="">&#8226; ABOUT US</a></p>
+                                    <p><a href="">&#8226; LOCATION</a></p>
+                                </div>
+                            </li>
+                            <li><a href="flowermood_etc/online_store.html">ONLINE STORE</a>
+                                <div class="underline"></div>
+                                <div class="hide_2">
+                                    <div class="hide_2_img"><img src="../Flowermood/about_us_5.jpg" alt=""></div>
+
+                                    <p><a href="">&#8226; ALL</a></p>
+                                    <p><a href="">&#8226; 선인장/다육식물</a></p>
+                                    <p><a href="">&#8226; 행잉식물</a></p>
+                                    <p><a href="">&#8226; 공기정화식물</a></p>
+
+                                </div>
+                            </li>
+                            <li><a href="">COLLECTION</a>
+                                <div class="underline"></div>
+                            </li>
+                            <li>
+                                <div class="logo_wrap">
+                                    <a href="../ptype.html">
+                                        <img class="logo" src="../Flowermood/flowerMood_size.png" alt="">
+                                    </a>
+                                </div>
+                            </li>
+                            <li><a href="board_FAQ.html">BOARD</a>
+                                <div class="underline"></div>
+                            </li>
+                            <li><a href="mypage.html">MYPAGE</a>
+                                <div class="underline"></div>
+                            </li>
+                            <li><a href="cart.html">CART</a>
+                                <div class="underline"></div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+
+
+        </header>
+        <div class="header_back"></div>
+        <section>
+           
+        </section>
+
+        <footer>
+            <div class="stbox footer_logo_wrap">
+                <!--                <a href="">-->
+                <img class="logo" src="../Flowermood/flowerMood_size.png" alt="">
+                <!--                </a>-->
+            </div>
+
+            <div class="stbox st_box_1">
+                <p class="st_big">010-2223-0833</p>
+                <p class="st_small">OPENING HOURS. AM10:00~PM20:00</p>
+                <p class="st_small">LUNCH BREAK. PX13:00~PM14:00</p>
+                <p class="st_small">MON OFF</p>
+            </div>
+
+            <div class="stbox st_box_2">
+                <p>COMPANY <b>Flowermood</b></p>
+                <p>OWNER&amp;ADMIN <b>Jake</b></p>
+                <p>BUSINESS NO. <b>212-6541-004562</b></p>
+                <p>ONLINE-ORDER NO. <b>제 2018-용인기흥-0004호</b></p>
+                <p>ADRESS <b>경기도 용인시 기흥구 구갈동 366-6</b></p>
+                <p>TEL <b>010-2223-0833</b></p>
+                <p>EMAIL <b>hbpark2@gmail.com</b></p>
+                <p><a href="../mobile/index.html"><b>mobile.ver</b></a></p>
+            </div>
+
+            <div class="stbox st_box_3">
+                <img src="../Flowermood/banner_knew.png" alt="">
+
+            </div>
+
+            <div class="stbox st_box_4">
+
+            </div>
+
+            <div class="stbox st_box_5">
+
+            </div>
+
+
+        </footer>
+
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+body {
+    background-color: #eee2d6;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+#content {
+    margin: 60px 0;
+}
+.tit {
+    padding: 50px 0 30px;
+    padding-left: 20px;
+    text-align: left;
+    font-size: 20px;
+    color: #333;
+}
+
+.welc {
+    font-size: 16px;
+    padding-left: 20px;
+
+}
+
+fieldset {
+    width: 80%;
+    margin: 50px auto;
+    border: none;
+}
+
+label {
+    display: block;
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+input:focus {
+    outline: none;
+}
+
+input {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    border: none;
+    background-color: inherit;
+    border-bottom: 1px solid #444;
+    color: #333;
+}
+
+.goBox {
+    margin: 50px 0 150px;
+    width: 100%;
+}
+
+.goBox a {
+    display: block;
+    width: 80%;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #555;
+    background-color: #eee2d6;
+    text-indent: 20px;
+    margin: 20px auto;
+    font-size: 16px;
+    font-family: 'Nanum Gothic', sans-serif;
+
+}
+.arrow{
+    display: block;
+    margin-top: 13px;
+    margin-right: 20px;
+    float: right;
+    color: #444;
+}
+
+.lbox {
+    color: #333;
+}
+
+.sbox {
+    color: #333;
+}

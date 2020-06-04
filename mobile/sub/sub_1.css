@@ -1,0 +1,56 @@
+.tit{
+    padding: 50px 0 50px;
+    text-align: center;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 20px;
+    color: #333;
+}
+#content{
+    margin-top: 60px;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+#content>ul>li>img{
+    width: 100%;
+    display: block;
+}
+.intro_1>li:nth-child(2){
+    padding: 15% 5%;
+    line-height: 1.5em;
+    font-size: 18px;
+}
+.sub_tit{
+    display: block;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.intro_2>li:nth-child(1){
+    width:90%;
+    margin: 0 auto;
+}
+.intro_2>li:nth-child(2){
+    width:70%;
+    padding: 15% 5%;
+    padding-left: 5%;
+    line-height: 1.5em;
+    font-size: 20px;
+}
+.intro_2>li:nth-child(4){
+    text-align: center;
+    width:80%;
+    padding: 15% 10%;
+    line-height: 1.5em;
+    font-size: 20px;
+}
+.go_store{
+    display: block;
+    width:80%;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #555;
+    color: #444;
+    text-indent: 10px;
+    margin: 10% 10%;
+}
+
+

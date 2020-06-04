@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="formet-detection" content="telephone=no">
+
+
+    <title>flowermood</title>
+
+    <link rel="apple-touch-icon-precomposed" href="app_icon.png">
+    <link rel="apple-touch-startup-image" href="startup.png">
+    <link rel="stylesheet" href="sub/common.css">
+    <link rel="stylesheet" href="sub/sub_8.css">
+    <link rel="stylesheet" href="sub/idangerous.swiper.css">
+    <!-- 폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
+    <!-- 폰트 -->
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="js/prefixfree.min.js"></script>
+    <script src="sub/idangerous.swiper-2.0.min.js"></script>
+    <script src="sub/appstore.js"></script>
+    <script src="sub/common.js"></script>
+
+
+
+
+    <!--[if lt IE 9]> 
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+    <!--[if lt IE 9]>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+
+
+</head>
+
+<body>
+    <!--skipNav-->
+    <div id="skipNav">
+        <a href="#content">본문 바로가기</a>
+        <a href="#gnb">글로벌네비게이션 바로가기</a>
+    </div>
+
+    <!--skipNav-->
+    <div id="wrap">
+
+        <!--헤더 삽입 영역-->
+        <? include "common/subheader.html" ?>
+        <!--헤더 삽입 영역-->
+
+
+        <article id="content">
+            <h2 class="hidden">본문 컨텐츠</h2>
+            <span class="tit">카트</span>
+            <ul class="info">
+                <li>디시디아</li>
+                <li>1 <i class="fas fa-caret-up"></i></li>
+            </ul>
+            <ul class="add_del">
+                <li>디시디아 <span>삭제</span></li>
+                <li>\56,000</li>
+            </ul>
+            <ul class="total">
+                <li>소계</li>
+                <li>\56,000</li>
+            </ul>
+            <a class="go_pay" href="#">결제하기</a>
+            
+        </article>
+
+        <!-- 푸터 삽입 영역 START-->
+
+        <? include "common/footer.html" ?>
+
+        <!-- 푸터 삽입 영역 END-->
+    </div>
+    <script src="https://kit.fontawesome.com/e39232b629.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

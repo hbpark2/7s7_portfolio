@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding:0;
+}
+#skipNav {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+#skipNav a {
+    display: block;
+    height: 1px;
+    margin-bottom: -1px;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+}
+
+#skipNav a:hover, #skipNav a:focus, #skipNav a:active {
+    display: block;
+    height: auto;
+    padding: 5px 0;
+    background: #f00;
+}
+html,body{
+    width: 100%;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+.wrapper{
+    width: 100%;
+    overflow: hidden;
+}
+.hidden {
+    display: block;
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    color: #fff;
+}
+body{
+    background-color: #fcfae8;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}

@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#skipNav {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+#skipNav a {
+    display: block;
+    height: 1px;
+    margin-bottom: -1px;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+}
+
+#skipNav a:hover,
+#skipNav a:focus,
+#skipNav a:active {
+    display: block;
+    height: auto;
+    padding: 5px 0;
+    background: #f00;
+}
+
+html,
+body {
+    width: 100%;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+.hidden {
+    display: block;
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    color: #fff;
+}
+
+body {
+    background-color: #fcfae8;
+    color: #333;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+h1 a {
+    position: absolute;
+    margin-left: 500px;
+    display: block;
+    top: 40px;
+    width: 200px;
+    height: 40px;
+    text-indent: -9999px;
+    background: url(../sub/common/images/logo.png) no-repeat;
+    background-size: 200px 40px;
+}
+
+.hidden,
+#skipNav {
+    display: block;
+    position: absolute;
+    left: -1000%;
+    top: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    color: #fff;
+}
+
+/*-----------------------------------------------------header-----------------------------------------------------*/
+header {
+    width: 100%;
+    height: 150px;
+    position: fixed;
+    z-index: 999;
+    background-color: rgba(252, 250, 232, 0.1);
+    box-shadow: 0px 0px 15px rgba(50, 50, 50, 0.5);
+    transition: 1s;
+}
+
+h1 a {
+    position: absolute;
+    z-index: 999;
+    margin-left: 500px;
+    display: block;
+    top: 40px;
+    width: 200px;
+    height: 40px;
+    text-indent: -9999px;
+    background: url(../../sub/common/images/logo.png) no-repeat;
+    background-size: 200px 40px;
+}
+
+.logo_box {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+nav {
+    position: absolute;
+    width: 1200px;
+    height: 300px;
+    left: 50%;
+    margin-left: -600px;
+}
+
+nav ul {
+    height: 300px;
+}
+
+.nav_top {
+    height: 35px;
+}
+
+.dropdownmenu {
+    margin-top: 50px;
+    height: 65px;
+}
+
+nav > ul > li {
+    text-align: center;
+    float: left;
+}
+
+.nav_top li {
+    width: 70px;
+    line-height: 35px;
+}
+
+.nav_top a {
+    font-size: 12px;
+}
+
+.nav_top li:nth-child(1) {
+    margin-left: 950px;
+    color: #333;
+}
+
+.dropdownmenu > li {
+    width: 240px;
+    line-height: 65px;
+}
+
+.dropdownmenu a {
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+
+}
+
+.menu::after {
+    content: '';
+    position: absolute;
+    top: 135px;
+    margin-left: 90px;
+    display: block;
+    width: 1px;
+    height: 1px;
+    background-color: #333;
+    transition: all 0.5s;
+}
+
+.menu:hover::after {
+    width: 60px;
+    background-color: #fff;
+}
+
+.menu_hide {
+    position: absolute;
+    height: 10px;
+    display: none;
+}
+
+.menu_hide > li {
+    position: relative;
+    top: -20px;
+    width: 240px;
+    height: 50px;
+    transition: 0.5s;
+    border-radius: 25px;
+    border-left-color: salmon;
+}
+
+.menu_hide > li > a {
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.menu_hide > li > a:hover {
+    color: #700;
+}
+
+/*-----------------------------------------------------header-----------------------------------------------------*/
+@keyframes headerAni {
+    0% {
+        background-position: 0px 00px;
+    }
+
+    100% {
+        background-position: 0px -100px;
+    }
+}
+
+.header_back {
+    position: relative;
+    z-index: -1;
+    top: 0;
+    width: 100%;
+    height: 300px;
+    background-image: url(../../sub/common/images/top_1.png);
+    background-size: 100%;
+    animation-name: headerAni;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+
+/*---------------------------------------------------SUB HEADER-----------------------------------------------------*/
+
+#content {
+    width: 1200px;
+    margin: 50px auto 250px;
+}
+
+#content .tit {
+    width: 90%;
+    margin: 0 5%;
+    font-size: 24px;
+    height: 30px;
+    line-height: 30px;
+    padding: 30px 0 70px;
+    font-weight: 600;
+    color: #444;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+table {
+    width: 90%;
+    margin: 0 5%;
+    border-collapse: collapse; 
+    border-spacing: 0;
+
+}
+
+th,
+td {
+    border: 1px solid #ccb;
+    padding: 10px
+}
+
+th {
+    width: 20%
+}
+
+td {
+    width: 80%
+}
+
+input,
+select {
+    padding: 5px;
+    border-radius: 2px;
+    font-size: 16px;
+    border: 0;
+    background: #eed;
+}
+input{
+    width: 300px;
+    height : 30px;
+    line-height: 30px;
+}
+table tr:last-child td {
+    text-align: center;
+    padding: 20px 0;
+    overflow: hidden;
+}
+table tr:last-child td >a{
+    display: block;
+    float: left;
+    margin-left: 200px;
+    width: 300px;
+    height: 50px;
+    line-height: 50px;
+    color: #eed;
+    background-color: #444;
+}
+table tr:last-child td >a:last-of-type{
+    margin-left: 50px;
+    color: #444;
+    background-color: #eed;
+}
+
+.hp{
+    width: 150px;
+}

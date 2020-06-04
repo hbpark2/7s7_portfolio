@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>board</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <style>
+    
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%:   
+        }
+        body{
+            background-color: #fcfae8;
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+        .wrapper {
+            width: 1200px;
+            height: 1500px;
+            margin: 0 auto;
+        }
+
+        header {
+            width: 1200px;
+            height: 100px;
+        }
+        @keyframes headerAni{
+            0%{
+                background-position: 0px 00px;
+            }
+            100%{
+                background-position: 0px -100px;
+            }
+        }
+        .header_back {
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            width: 1200px;
+            height: 250px;
+            background-image: url(../Flowermood/about%20us_9.jpg);
+            background-repeat: no-repeat;
+            background-size: 1200px 800px;
+            background-position: 0px -400px;
+            animation-name: headerAni;
+            animation-duration: 7s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+        }
+        .top {
+            position: fixed;
+            height: 100px;
+            z-index: 10;
+            transition: 1s;
+            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .top:hover {
+            background-color: rgba(252, 250, 232, 0.9);
+        }
+        li {
+            list-style: none;
+            float: left;
+            margin-left: 30px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        li>a {
+            font-family: 'Varela Round', sans-serif;
+            font-size: 14px;
+        }
+
+        .login_inner {
+            width: 100%;
+            height: 35px;
+            /*            background-color: #fafafa;*/
+        }
+
+        .login_ul {
+            float: right;
+            width: 1200px;
+            height: 35px;
+        }
+
+        .login_inner>ul>li {
+            float: right;
+            margin-right: 10px;
+            line-height: 30px;
+        }
+
+        .login_inner>ul>li:nth-child(1) {
+            float: right;
+            margin-right: 140px;
+            line-height: 30px;
+        }
+
+        .login_inner>ul>li>a {
+            color: #6b6b6b;
+            text-decoration: none;
+            font-size: 12px;
+            font-family: 'Varela Round', sans-serif;
+        }
+
+        /*------------------------------------------------------------
+        -------------login, defalut setting-----------------------------*/
+        .logo {
+            width: 150px;
+            height: 50px;
+        }
+
+        .nav_inner {
+            width: 1200px;
+            height: 100px;
+        }
+
+        .nav_inner>ul {
+            width: 1000px;
+            height: 100px;
+            margin: 0 auto;
+        }
+
+        .nav_inner>ul>li:nth-child(1) {
+            line-height: 50px;
+            margin-left: 0px;
+        }
+
+        .nav_inner>ul>li {
+            height: 80px;
+            line-height: 50px;
+            margin-left: 70px;
+        }
+        .nav_inner>ul>li>.underline{
+            position: relative;
+            top:-15px;
+            left:-2px;
+            width: 0px;
+            height: 1px;
+            background-color: #fff;
+            transition: 0.5s;
+        }
+        .nav_inner>ul>li:hover .underline{
+            width: 100%;
+            height: 1px;
+            background-color: #6b6b6b;
+        }
+        .nav_inner>ul>li:nth-of-type(1):hover .hide_1{
+            opacity: 1;
+            display: block;
+        }
+        .hide_1:hover{
+            opacity: 1;
+            display: block;
+        }
+        .hide_1{
+            width: 1000px;
+            height:300px;
+            background-color: rgba(252, 250, 232, 0.9);
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            transition: 1s;
+            opacity: 0;
+            display: none;
+            border-radius: 50px;
+            overflow: hidden;
+        }
+        .hide_1 > div > img{
+            display: block;
+            float: left;
+            width:250px;
+            height:300px;
+            opacity: 0.7;
+        }
+        .hide_1 > p{
+            width: 500px;
+            height: 50px;
+            margin:15px;
+            margin-left: 300px;
+            color: #333;
+            font-size: 20px;
+            font-weight: 600;
+            transition: 0.5s;
+            border-radius: 25px;
+        }
+        .hide_1 > p:hover{
+            width: 500px;
+            height: 50px;
+            margin:15px;
+            margin-left: 300px;
+            color: #000;
+            font-size: 21px;
+            font-weight: 600;
+            background-color: rgba(232, 230, 202, 0.9);
+            border-radius: 25px;
+        }
+        
+        .nav_inner>ul>li:nth-of-type(2):hover .hide_2{
+            opacity: 1;
+            display: block;
+        }
+        
+        .hide_2{
+            width: 1000px;
+            height:300px;
+            background-color:  rgba(252, 250, 232, 0.9);
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            transition: 1s;
+            opacity: 0;
+            display: none;
+            border-radius: 50px;
+            overflow: hidden;
+        }
+        .hide_2 > div > img{
+            display: block;
+            float: left;
+            width:250px;
+            height:300px;
+            opacity: 0.7;
+        }
+        .hide_2 > p{
+            width: 500px;
+            height: 50px;
+            margin:15px;
+            margin-left: 300px;
+            color: #333;
+            font-size: 20px;
+            font-weight: 600;
+            transition: 0.5s;
+        }
+        .hide_2 > p:hover{
+            width: 500px;
+            height: 50px;
+            margin:15px;
+            margin-left: 300px;
+            color: #000;
+            font-size: 21px;
+            font-weight: 600;
+            background-color: rgba(232, 230, 202, 0.9);
+            border-radius: 25px;
+        }
+        .hide_2:hover{
+            opacity: 1;
+            display: block;
+        }
+    /*-------------------------HEADER-----------------------------------*/
+    /*-------------------------SECTION-----------------------------------*/
+        section{
+            position: absolute;
+/*            background-color: salmon;*/
+            width: 1200px;
+            height: 1200px;
+        }
+        article{
+            position: absolute;
+            width: 1200px;
+            height: 800px;
+        }
+        article>h1 {
+            position: relative;
+            z-index: 1;
+            top: 0px;
+            width: 1200px;
+            height: 150px;
+            line-height: 150px;
+            font-size: 48px;
+            font-weight: 700;
+            color: #333;
+            text-align: center;
+        }
+        article > .m_box{
+            margin-top: 50px;
+            width:1200px;
+            height: 100px;
+        }
+        article > .m_box > div:nth-of-type(1){
+            margin-left: 75px;
+        }
+        article > .m_box > div:nth-of-type(2){
+            background-color: #aa9;
+            color: #ffe;
+        }
+        article > .m_box > div:nth-of-type(2) > a{
+            color: #ffe;
+        }
+        article > .m_box > div{
+/*            margin-left: 75px;*/
+            width:350px;
+            height: 100px;
+            float: left;
+            line-height: 100px;
+            font-size: 24px;
+            color: #554;
+            text-align: center;
+            font-weight: 600;
+            border: 1px solid #aa9;
+            box-sizing: border-box;
+/*            box-shadow: 5px 5px 5px rgba(150,150,100, 0.5);*/
+            transition: 0.5s;
+        }
+        article > .m_box > div:hover{
+            background-color: #aa9;
+        }
+        article > .m_box > div:hover >a{
+            color: #ffe;
+        }
+        /*-------------------------------------------------------------*/
+        article > .t_box{
+            position: relative;
+            top: 50px;
+            width:1200px;
+            height: 1200px;
+        }
+        .notice_tbox > p{
+            margin-top: 10px;
+            width: 200px;
+            height:50px;
+            line-height: 50px;
+            font-size: 20px;
+            color:#333;
+            font-weight: 600;
+            float: left;
+        }
+        .notice_tbox > .notice_top{
+            margin-left: 900px;
+        }
+        select{
+            float: left;
+            width: 100px;
+            height: 30px;
+            font-size: 14px;
+            color: #333;
+            margin-top: 20px;
+        }
+        input[type="search"]{
+            width: 200px;
+            height: 30px;
+            font-size: 14px;
+            color: #333;
+            margin-top: 20px;
+        }
+        .notice_tbox > .notice_h{
+            margin-top: 10px;
+            width: 1200px;
+            height:50px;
+            border-top: 2px solid #333;
+            border-bottom: 1px solid #ccb;
+            background-color: #eed;
+        }
+        .notice_tbox > .notice_h > div{
+            float: left;
+            height: 50px;
+            line-height: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            text-align: center;
+            border-right: 1px solid #ccb;
+            box-sizing: border-box;
+        }
+        .notice_tbox > .notice_h > div:nth-of-type(1){
+            width: 200px;
+        }
+        .notice_tbox > .notice_h > div:nth-of-type(2){
+            width: 600px;
+        }
+        .notice_tbox > .notice_h > div:nth-of-type(3){
+            width: 200px;
+        }
+        .notice_tbox > .notice_h > div:nth-of-type(4){
+            width: 200px;
+            border-right: none;
+        }
+        .notice_tbox > .notice_atc{
+            width: 1200px;
+            height:50px;
+            border-bottom: 1px solid #ddc;
+            background-color: #fcfae8;
+            transition: 0.5s;
+        }
+        .notice_tbox > .notice_atc:hover{
+            background-color: #ddc;
+            
+        }
+        .notice_tbox > .notice_atc > div{
+            float: left;
+            height: 50px;
+            line-height: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            text-align: center;
+        }
+        .notice_tbox > .notice_atc > div:nth-of-type(1){
+            width: 200px;
+        }
+        .notice_tbox > .notice_atc > div:nth-of-type(2){
+            width: 600px;
+        }
+        .notice_tbox > .notice_atc > div:nth-of-type(3){
+            width: 200px;
+        }
+        .notice_tbox > .notice_atc > div:nth-of-type(4){
+            width: 200px;
+        }
+/*----------------------  BOTTOMBOX  ---------------------------------*/
+        .btn_box{
+            width: 150px;
+            height: 50px;
+            float: right;
+            margin-top: 30px;
+        }
+        .btn_box > input{
+            width: 150px;
+            height: 50px;
+            background-color: #ffe;
+            border: 1px solid #ddc;
+            box-sizing: border-box;
+            color: #333;
+            font-size: 18px;
+            font-weight: 600;
+            font-family: "Nanum Gothic";
+            box-shadow: inset 50px 50px 2px rgba(150,150,130,0.5),
+                        inset -50px -50px 2px rgba(150,150,130,0.5);
+            transition: 0.5s;
+        }
+        .btn_box > input:hover{
+            width: 150px;
+            height: 50px;
+            margin-bottom: 5px;
+            background-color: #ffe;
+            border: 1px solid #ddc;
+            box-sizing: border-box;
+            color: #333;
+            box-shadow: inset 2px 2px 2px rgba(150,150,130,0.5),
+                        inset -2px -2px 2px rgba(150,150,130,0.5);
+            cursor: pointer;
+        }
+        .notice_nbox{
+            
+            width:250px;
+            margin: 100px auto;
+        }
+        .notice_nbox > span{
+            display: block;
+            float: left;
+            line-height: 40px;
+            width:40px;
+            height: 40px;
+            text-align: center;
+        }
+        .notice_nbox > span > a{
+            color: #333;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        .notice_nbox > span > a > img{
+            width:30px;
+            height: 30px;
+            margin-top: 5px;
+        }
+        /*--------------------------------------------------*/
+        footer {
+            position: relative;
+            top: 1100px;
+            width: 1200px;
+            height: 400px;
+        }
+        .footer_logo_wrap{
+            width:1200px;
+            height: 100px;
+            padding: 20px;
+        }
+        .footer_logo_wrap > img{
+            display: block;
+            width: 250px;
+            height:100px;
+        }
+        .st_big{
+            width: 250px;
+            height:30px;
+            line-height: 30px;
+            color: #333;
+            font-size: 20px;
+        }
+        .st_small{
+            width: 250px;
+            height:30px;
+            line-height: 30px;
+            color: #333;
+            font-size: 14px;
+        }
+        
+        .stbox{
+            float: left;
+        }
+        .st_box_1{
+            position: relative;
+            z-index: 1;
+        }
+        .st_box_2{
+            position: relative;
+            z-index: 1;
+            width: 350px;
+            height: 250px;
+            margin-left: 20px;
+        }
+        .st_box_2 > p{
+            line-height: 30px;
+            color: #333;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        @keyframes glassAni{
+            0%{
+                -webkit-transform: rotate(0deg);
+            }
+            100%{
+                -webkit-transform: rotate(10deg);
+            }
+        }
+        .st_box_3{
+            overflow: hidden;
+            position: absolute;
+/*            left:1050px;*/
+            width: 1200px;
+            height:400px;
+            opacity: 0.5;
+        }
+        .st_box_3 > img:nth-of-type(1){
+            position: absolute;
+            top: -30px;
+            display: block;
+            float: left;
+            width: 400px;
+            height:250px;
+            transform-origin: 0% 0%;
+            animation-name: glassAni;
+            animation-duration: 3s;
+            animation-direction: alternate;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+        }
+        .st_box_3 > img:nth-of-type(2){
+            position: absolute;
+            top: -30px;
+            left: 200px;
+            width: 400px;
+            height:250px;
+            transform-origin: 0% 0%;
+            animation-name: glassAni;
+            animation-duration: 3s;
+            animation-direction: alternate;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+        }
+        .st_box_3 > img:nth-of-type(3){
+            position: relative;
+            top: -80px;
+            left: 400px;
+            width: 400px;
+            height:250px;
+            transform-origin: 0% 0%;
+            animation-name: glassAni;
+            animation-duration: 3s;
+            animation-direction: alternate;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+        }
+        .st_box_3 > img:nth-of-type(4){
+            position: relative;
+            top: 150px;
+            left: 450px;
+            width: 300px;
+            height:300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="top">
+                <div class="login_inner">
+                    <ul class="login_ul">
+                        <li><a href="">search</a></li>
+                        <li><a href="">login</a></li>
+                        <li><a href="join.html">sign up</a></li>
+                    </ul>
+                </div>
+
+                <nav>
+                    <div class="nav_inner">
+                        <ul>
+                            <li>
+                                <a href="abPtype.html">ABOUT US</a>
+                                <div class="underline"></div>
+                                <div class="hide_1">
+                                    <div class="hide_img"><img src="../Flowermood/about_us_6.jpg" alt=""></div>
+                                    <p><a href="">&#8226; ABOUT US</a></p>
+                                    <p><a href="">&#8226; LOCATION</a></p>
+                                </div>
+                            </li>
+                            <li><a href="online_store.html">ONLINE STORE</a>
+                                <div class="underline"></div>
+                                <div class="hide_2">
+                                    <div class="hide_2_img"><img src="../Flowermood/about_us_5.jpg" alt=""></div>
+                                    
+                                    <p><a href="">&#8226; ALL</a></p>
+                                    <p><a href="">&#8226; 선인장/다육식물</a></p>
+                                    <p><a href="">&#8226; 행잉식물</a></p>
+                                    <p><a href="">&#8226; 공기정화식물</a></p>
+                                    
+                                </div>
+                            </li>
+                            <li><a href="">COLLECTION</a>
+                                <div class="underline"></div>
+                            </li>
+                            <li>
+                                <div class="logo_wrap">
+                                    <a href="../ptype.html">
+                                        <img class="logo" src="../Flowermood/flowerMood_size.png" alt="">
+                                    </a>
+                                </div>
+                            </li>
+                            <li><a href="">BOARD</a>
+                                <div class="underline"></div>
+                            </li>
+                            <li><a href="mypage.html">MYPAGE</a>
+                                <div class="underline"></div>
+                            </li>
+                            <li><a href="cart.html">CART</a>
+                                <div class="underline"></div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+            
+
+        </header>
+        <div class="header_back"></div>
+        <section>
+            
+            <article>
+                <h1>CS CENTER</h1>
+                <div class="m_box">
+                    <div><a href="board_Notice.html">NOTICE</a></div>
+                    <div><a href="board_FAQ.html">FAQ</a></div>
+                    <div><a href="board_QnA.html">Q&amp;A</a></div>
+                </div>
+                
+                <div class="t_box">
+                    <div class="notice_tbox">
+                        <p>공지사항</p>
+                        
+                        <div class="notice_top">
+                            <select name="" id="">
+                                <option value="">제목</option>
+                                <option value="">내용</option>
+                                <option value="">작성자</option>
+                            </select>
+                            <input type="search">
+                        </div>
+                        
+                        <div class="notice_h">
+                            <div>NO</div>
+                            <div>제목</div>
+                            <div>작성일</div>
+                            <div>조회수</div>
+                        </div>
+                           <div class="notice_atc">
+                            <div>111</div><!--NO-->
+                            <div><a href="">나문희합니당^-^*</a></div><!--제목-->
+                            <div>111</div><!--작성일-->
+                            <div>11</div><!--조회수-->
+                        </div>
+                        <div class="notice_atc">
+                            <div></div><!--NO-->
+                            <div></div><!--제목-->
+                            <div></div><!--작성일-->
+                            <div></div><!--조회수-->
+                        </div>
+                        <div class="notice_atc">
+                            <div></div><!--NO-->
+                            <div></div><!--제목-->
+                            <div></div><!--작성일-->
+                            <div></div><!--조회수-->
+                        </div>
+                        <div class="notice_atc">
+                            <div></div><!--NO-->
+                            <div></div><!--제목-->
+                            <div></div><!--작성일-->
+                            <div></div><!--조회수-->
+                        </div>
+                        <div class="notice_atc">
+                            <div></div><!--NO-->
+                            <div></div><!--제목-->
+                            <div></div><!--작성일-->
+                            <div></div><!--조회수-->
+                        </div>
+                        <div class="notice_atc">
+                            <div></div><!--NO-->
+                            <div></div><!--제목-->
+                            <div></div><!--작성일-->
+                            <div></div><!--조회수-->
+                        </div>
+                        <div class="notice_atc">
+                            <div></div><!--NO-->
+                            <div></div><!--제목-->
+                            <div></div><!--작성일-->
+                            <div></div><!--조회수-->
+                        </div>
+                        <div class="notice_atc">
+                            <div></div><!--NO-->
+                            <div></div><!--제목-->
+                            <div></div><!--작성일-->
+                            <div></div><!--조회수-->
+                        </div>
+                        <div class="notice_atc">
+                            <div></div><!--NO-->
+                            <div></div><!--제목-->
+                            <div></div><!--작성일-->
+                            <div></div><!--조회수-->
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="btn_box">
+                        <input type="button" value="글쓰기">
+                    </div>
+                    <div class="notice_nbox">
+                        <span>
+                            <a href=""><img src="../Flowermood/left.png" alt=""></a>
+                        </span>
+                        <span>
+                            <a href="">1</a>
+                        </span>
+                        <span>
+                            <a href="">2</a>
+                        </span>
+                        <span>
+                            <a href="">3</a>
+                        </span>
+                        <span>
+                            <a href="">4</a>
+                        </span>
+                        <span>
+                            <a href=""><img src="../Flowermood/right.png" alt=""></a>
+                        </span>
+                    </div>
+                </div>
+                
+                
+            </article>
+            
+            
+        </section>
+        
+        <footer>
+            <div class="stbox footer_logo_wrap">
+<!--                <a href="">-->
+                    <img class="logo" src="../Flowermood/flowerMood_size.png" alt="">
+<!--                </a>-->
+            </div>
+            
+            <div class="stbox st_box_1">
+                <p class="st_big">010-2223-0833</p>
+                <p class="st_small">OPENING HOURS. AM10:00~PM20:00</p>
+                <p class="st_small">LUNCH BREAK. PX13:00~PM14:00</p> 
+                <p class="st_small">MON OFF</p>      
+            </div>
+
+           <div class="stbox st_box_2">
+                <p>COMPANY <b>Flowermood</b></p>
+                <p>OWNER&amp;ADMIN <b>Jake</b></p> 
+                <p>BUSINESS NO. <b>212-6541-004562</b></p>
+                <p>ONLINE-ORDER NO. <b>제 2018-용인기흥-0004호</b></p>
+                <p>ADRESS <b>경기도 용인시 기흥구 구갈동 366-6</b></p>  
+                <p>TEL <b>010-2223-0833</b></p>      
+                <p>EMAIL <b>hbpark2@gmail.com</b></p>  
+                <p><a href="../mobile/index.html"><b>mobile.ver</b></a></p>  
+           </div>
+           
+           <div class="stbox st_box_3">
+               <img src="../Flowermood/banner_knew.png" alt="">
+
+           </div>
+           
+           <div class="stbox st_box_4">
+               
+           </div>
+           
+           <div class="stbox st_box_5">
+               
+           </div>
+       
+       
+        </footer>
+        
+        
+    </div>
+</body>
+</html>

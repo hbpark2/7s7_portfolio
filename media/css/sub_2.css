@@ -1,0 +1,149 @@
+.tit {
+    text-align: center;
+    font-size: 48px;
+    font-family: 'Nanum Brush Script', cursive;
+    color: #fff;
+    padding: 20px 0;
+}
+
+#content {
+    width: auto;
+    margin: 0 auto;
+    background-color: rgba(0,0,0,0.7);
+
+}
+
+#wrap {
+    overflow: hidden
+}
+
+.videoBox {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+}
+
+#imgBG {
+    position: fixed;
+    /*고정=>fixed/ 스크롤처리=>absolute */
+    left: 50%;
+    top: 50%;
+    /*오른쪽, 아래에 여백을 두지않고 꽉차게 표시*/
+    width: auto;
+    min-width: 100%;
+    /*동영상 너비를 꽉차게*/
+    height: auto;
+    min-height: 100%;
+    /*동영상 높이를 꽉차게*/
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -100;
+    display: block;
+}
+
+.down {
+    display: block;
+    font-size: 40px;
+    font-weight: 600;
+    position: absolute;
+    left: 50%;
+    margin-left: -90px;
+    bottom: 20%;
+    animation: ani 1s infinite alternate;
+    font-family: 'Nanum Brush Script', cursive;
+}
+
+@keyframes ani {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+        color: #fff;
+    }
+
+    100% {
+        transform: scale(1.1);
+        opacity: 0.8;
+        color: #000;
+    }
+}
+
+.visual_txt {
+    position: relative;
+    top: 45%;
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    color: #000;
+    font-weight: 600;
+    font-size: 3.5em;
+    font-family: 'Nanum Brush Script', cursive;
+
+}
+.example{
+    padding: 50px 0;
+}
+
+
+
+
+/*-------------------------------------------------------------------*/
+.grid-image-item,
+.grid--images .grid-sizer {
+    width: 20%;
+}
+
+.grid-image-item {
+    float: left;
+    margin-bottom: 10px
+}
+
+.grid-image-item img {
+    border-radius: 3%;
+    display: block;
+    width: 96%;
+    margin: 10px auto;
+}
+
+.grid-image-item h4 {
+    display: block;
+    width: 96%;
+    text-align: center;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.grid-image-item p {
+    display: block;
+    width: 96%;
+    text-align: center;
+    margin: 0 auto;
+    color: #fff;
+
+}
+
+/*-------------------------------------------------------------------*/
+
+@media screen and (max-width:1024px) {
+
+    .grid-image-item,
+    .grid--images .grid-sizer {
+        width: 25%;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+
+    .grid-image-item,
+    .grid--images .grid-sizer {
+        width: 33.33%;
+    }
+}
+
+@media screen and (max-width:640px) {
+
+    .grid-image-item,
+    .grid--images .grid-sizer {
+        width: 50%;
+    }
+}

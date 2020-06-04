@@ -1,0 +1,381 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#skipNav {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+#skipNav a {
+    display: block;
+    height: 1px;
+    margin-bottom: -1px;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+}
+
+#skipNav a:hover,
+#skipNav a:focus,
+#skipNav a:active {
+    display: block;
+    height: auto;
+    padding: 5px 0;
+    background: #f00;
+}
+
+html,
+body {
+    width: 100%;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+.hidden {
+    display: block;
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    color: #fff;
+}
+
+body {
+    background-color: #fcfae8;
+    color: #333;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+h1 a {
+    position: absolute;
+    margin-left: 500px;
+    display: block;
+    top: 40px;
+    width: 200px;
+    height: 40px;
+    text-indent: -9999px;
+    background: url(../sub/common/images/logo.png) no-repeat;
+    background-size: 200px 40px;
+}
+
+.hidden,
+#skipNav {
+    display: block;
+    position: absolute;
+    left: -1000%;
+    top: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    color: #fff;
+}
+
+/*-----------------------------------------------------header-----------------------------------------------------*/
+header {
+    width: 100%;
+    height: 150px;
+    position: fixed;
+    z-index: 999;
+    background-color: rgba(252, 250, 232, 0.1);
+    box-shadow: 0px 0px 15px rgba(50, 50, 50, 0.5);
+    transition: 1s;
+}
+
+h1 a {
+    position: absolute;
+    z-index: 999;
+    margin-left: 500px;
+    display: block;
+    top: 40px;
+    width: 200px;
+    height: 40px;
+    text-indent: -9999px;
+    background: url(../../sub/common/images/logo.png) no-repeat;
+    background-size: 200px 40px;
+}
+
+.logo_box {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+nav {
+    position: absolute;
+    width: 1200px;
+    height: 300px;
+    left: 50%;
+    margin-left: -600px;
+}
+
+nav ul {
+    height: 300px;
+}
+
+.nav_top {
+    height: 35px;
+}
+
+.dropdownmenu {
+    margin-top: 50px;
+    height: 65px;
+}
+
+nav > ul > li {
+    text-align: center;
+    float: left;
+}
+
+.nav_top li {
+    width: 70px;
+    line-height: 35px;
+}
+
+.nav_top a {
+    font-size: 12px;
+}
+
+.nav_top li:nth-child(1) {
+    margin-left: 950px;
+    color: #333;
+}
+
+.dropdownmenu > li {
+    width: 240px;
+    line-height: 65px;
+}
+
+.dropdownmenu a {
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+
+}
+
+.menu::after {
+    content: '';
+    position: absolute;
+    top: 135px;
+    margin-left: 90px;
+    display: block;
+    width: 1px;
+    height: 1px;
+    background-color: #333;
+    transition: all 0.5s;
+}
+
+.menu:hover::after {
+    width: 60px;
+    background-color: #fff;
+}
+
+.menu_hide {
+    position: absolute;
+    height: 10px;
+    display: none;
+}
+
+.menu_hide > li {
+    position: relative;
+    top: -20px;
+    width: 240px;
+    height: 50px;
+    transition: 0.5s;
+    border-radius: 25px;
+    border-left-color: salmon;
+}
+
+.menu_hide > li > a {
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.menu_hide > li > a:hover {
+    color: #700;
+}
+
+/*-----------------------------------------------------header-----------------------------------------------------*/
+@keyframes headerAni {
+    0% {
+        background-position: 0px 00px;
+    }
+
+    100% {
+        background-position: 0px -100px;
+    }
+}
+
+.header_back {
+    position: relative;
+    z-index: -1;
+    top: 0;
+    width: 100%;
+    height: 300px;
+    background-image: url(../../sub/common/images/top_4.png);
+    background-size: 100%;
+    animation-name: headerAni;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+
+/*---------------------------------------------------SUB HEADER-----------------------------------------------------*/
+#content {
+    width: 1200px;
+    margin: 0 auto 50px;
+}
+.tit{
+    font-size: 22px;
+    height: 30px;
+    line-height: 30px;
+    padding: 40px 0;
+    font-weight: 600;
+    color: #333;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+.member_tab {
+    padding: 30px 0;
+    border-top: 1px solid #333
+}
+
+.member_tab a {
+    font-size: 24px;
+    padding: 10px;
+    margin: 0 10px;
+    color: #aaa;
+}
+
+.member_tab a.on {
+    color: #000;
+    border-bottom: 2px solid #000;
+    font-weight: bold
+}
+
+.member_tab span {
+    font-size: 24px;
+    padding: 10px;
+    margin: 0 10px;
+    color: #000;
+    font-weight: bold
+}
+
+.join {
+    text-align: left
+}
+
+h4 {
+    font-size: 16px;
+    margin-top: 30px;
+}
+
+.join .policy {
+    padding: 10px;
+    overflow-y: scroll;
+    height: 150px;
+    margin: 10px 0;
+    border: 1px solid #ddd
+}
+
+.join .button {
+    text-align: center;
+    margin-top: 30px
+}
+
+.join .button .ok,
+.join .button button {
+    display: inline-block;
+    width: 200px;
+    line-height: 40px;
+    padding: 8px 0;
+    border: none;
+    background: #444;
+    color: #ffe;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all .5s;
+}
+.join .button .ok:hover{
+    background-color: #333;
+    color: #ffe;
+}
+.join .button .cancel {
+    display: inline-block;
+    width: 200px;
+    line-height: 40px;
+    padding: 8px 0;
+    border: none;
+    background: #eed;
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all .5s;
+}
+.join .button .cancel:hover{
+    background: #ccb;
+}
+.allcheck{
+    display: block;
+    font-size: 16px;
+    text-align: center;
+    margin: 20px 0;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #eed;
+    color: #444;
+    transition: all .5s;
+}
+.allcheck:hover{
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #933;
+    color: #ffe;
+}
+/*-----------------------------------------------------footer-----------------------------------------------------*/
+footer {
+    height: 200px;
+    padding: 50px;
+    background-color: rgba(50, 50, 50, 0.5);
+    overflow: hidden;
+}
+
+.footer_wrapper {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.footer_box {
+    float: left;
+}
+
+.footer_text > li {
+    display: block;
+    width: 300px;
+    height: 30px;
+    line-height: 2em;
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+}

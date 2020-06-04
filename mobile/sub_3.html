@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="formet-detection" content="telephone=no">
+
+
+    <title>flowermood</title>
+
+    <link rel="apple-touch-icon-precomposed" href="app_icon.png">
+    <link rel="apple-touch-startup-image" href="startup.png">
+    <link rel="stylesheet" href="sub/common.css">
+    <link rel="stylesheet" href="sub/sub_3.css">
+    <link rel="stylesheet" href="sub/idangerous.swiper.css">
+    <!-- 폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
+    <!-- 폰트 -->
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="js/prefixfree.min.js"></script>
+    <script src="sub/idangerous.swiper-2.0.min.js"></script>
+    <script src="sub/appstore.js"></script>
+    <script src="sub/common.js"></script>
+    <script src="sub/sub_3.js"></script>
+
+
+
+
+    <!--[if lt IE 9]> 
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+    <!--[if lt IE 9]>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+
+
+</head>
+
+<body>
+    <!--skipNav-->
+    <div id="skipNav">
+        <a href="#content">본문 바로가기</a>
+        <a href="#gnb">글로벌네비게이션 바로가기</a>
+    </div>
+
+    <!--skipNav-->
+    <div id="wrap">
+
+        <!--헤더 삽입 영역-->
+        <? include "common/subheader.html" ?>
+        <!--헤더 삽입 영역-->
+
+        <article id="content">
+            <h2 class="hidden">본문 컨텐츠</h2>
+            <h3 class="tit">전체 상품</h3>
+            <ul class="sub_nav">
+                <li><a href="#all_prd">전체 상품</a></li>
+                <li><a href="#nb_prd">NEW &amp; BEST</a></li>
+                <li><a href="#md_prd">PRODUCT</a></li>
+            </ul>
+            
+            <ul class="go_menu">
+                <li>
+                    <dl id="all_prd" class="all_prd">
+                        <dt><img src="images/aboutus_intro1.jpg" alt=""></dt>
+                        <dd>
+                            플라워무드의 NEW&amp;BEST 상품, MDPICK 등의 
+                            전체상품을 만나보실 수 있습니다.
+                            <a href="sub_4.html">전체상품 보러가기</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl id="nb_prd" class="nb_prd">
+                        <dt><img src="images/aboutus_intro2.jpg" alt=""></dt>
+                        <dd>
+                            플라워무드의 새로운상품, 가장 인기많은 상품을
+                            만나보실수있습니다.
+                            <a href="sub_4.html">NEW&amp;BEST 보러가기</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl id="md_prd" class="md_prd">
+                        <dt><img src="images/aboutus_intro3.jpg" alt=""></dt>
+                        <dd>
+                            플라워무드가 추천하는 상품들을 만나보실수있습니다.
+                            <a href="sub_4.html">MDPICK 보러가기</a>
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+
+        </article>
+
+        <!-- 푸터 삽입 영역 START-->
+
+        <? include "common/footer.html" ?>
+
+        <!-- 푸터 삽입 영역 END-->
+    </div>
+    <script src="https://kit.fontawesome.com/e39232b629.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

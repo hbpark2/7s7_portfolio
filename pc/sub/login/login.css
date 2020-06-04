@@ -1,0 +1,129 @@
+@keyframes headerAni {
+    0% {
+        background-position: 0px 00px;
+    }
+
+    100% {
+        background-position: 0px -100px;
+    }
+}
+
+.header_back {
+    position: relative;
+    z-index: -1;
+    top: 0;
+    width: 100%;
+    height: 300px;
+    background-image: url(../common/images/top_4.png);
+    background-size: 100%;
+    animation-name: headerAni;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+
+/*---------------------------------------------------SUB HEADER-----------------------------------------------------*/
+
+#content{
+    width: 1200px;
+    margin: 0 auto;
+}
+.login_section{    
+    padding-bottom: 50px;
+    text-align: center;
+}
+.tit{
+    font-size: 22px;
+    height: 30px;
+    line-height: 30px;
+    padding: 50px 0 20px;
+    color: #333;
+}
+.sub_tit{
+    height: 20px;
+    padding: 10px 0;
+    color: #776;
+}
+fieldset{
+    width: 500px;
+    margin: 0 auto;
+    border: none;
+}
+input{
+    border: none;
+    display: block;
+    margin: 20px 0;
+}
+input[type="text"],input[type="password"]{
+    width: 500px;
+    height: 50px;
+    background-color: #eed;
+}
+input[type="submit"]{
+    width: 500px;
+    height: 50px;
+    background-color: #aa9;
+    color: #ffe;
+    margin-bottom: 10px;
+}
+.login_bottom{
+}
+.login_bottom > div{
+    margin: 30px auto;
+    width: 500px;
+    overflow: hidden;
+    border-bottom: 1px solid #887;
+}
+.login_bottom > div > span{
+    width: 250px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    float: left;
+    text-align: center;
+}
+.login_bottom > div > span>a{
+    color: #776;
+}
+.login_bottom > p{
+    
+    width: 500px;
+    text-align: center;
+    color: #776;
+    margin: 10px auto;
+
+}
+.go_join{
+    display: block;
+    width: 500px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #aa9;
+    color: #ffe;
+    margin: 30px auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

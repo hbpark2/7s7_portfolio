@@ -1,0 +1,169 @@
+        @keyframes headerAni {
+            0% {
+                background-position: 0px 00px;
+            }
+
+            100% {
+                background-position: 0px -100px;
+            }
+        }
+
+        .header_back {
+            position: relative;
+            z-index: -1;
+            top: 0;
+            width: 100%;
+            height: 300px;
+            background-image: url(../common/images/top_4.png);
+            background-size: 100%;
+            animation-name: headerAni;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+        }
+
+        .online {
+            color: #700
+        }
+
+        /*---------------------------------------------------SUB HEADER-----------------------------------------------------*/
+        #content {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .prd_wrapper {
+            width: 1200px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        .prd_wrapper > dt {
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 54px;
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            padding: 5% 0;
+        }
+
+        .prd_wrapper > a {
+            opacity: 0;
+            transition: all .5s;
+        }
+
+        .prd_wrap {
+            width: 590px;
+            height: 590px;
+            margin: 5px;
+            float: left;
+            border-radius: 50px;
+            overflow: hidden;
+            transform: scale(0.95);
+        }
+
+        .prd_wrap:hover > .prd_b {
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 5;
+            transition: 0.5s;
+        }
+
+        .prd_f > img {
+            display: block;
+            width: 590px;
+            /*    height: 590px;*/
+            border-radius: 50px;
+            margin-top: -120px;
+        }
+
+        .prd_f {
+            display: block;
+            position: absolute;
+            z-index: 2;
+            width: 590px;
+            height: 590px;
+            transition: 1s;
+            border-radius: 50px;
+            overflow: hidden;
+        }
+
+        .prd_b {
+            position: relative;
+            z-index: 1;
+            width: 590px;
+            height: 590px;
+            float: left;
+            transition: 1s;
+            color: #fff;
+            border-radius: 50px;
+        }
+
+        .prd_b > dt {
+            margin-top: 180px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .description {
+            width: 550px;
+            line-height: 2em;
+            font-size: 14px;
+            text-align: center;
+            margin: 10px auto;
+        }
+
+        .prd_price {
+            margin-top: 100px;
+            height: 30px;
+            text-align: center;
+        }
+
+        .prd_price > span {
+            font-size: 20px;
+            font-weight: 700;
+            color: #e3e3e3;
+        }
+
+        /*-----------------------------------------------------------------------*/
+        .morebox {
+            width: 300px;
+            height: 200px;
+            margin: 0 auto 10px;
+            text-align: center;
+        }
+
+        .more {
+            display: block;
+            margin: 5px auto;
+            border-radius: 50px;
+            box-shadow: 5px 5px 5px rgba(98, 98, 85 0.7);
+            transition: all .5s;
+        }
+
+        .more1 {
+            width: 15px;
+            height: 15px;
+            background-color: #aa9;
+        }
+
+        .more2 {
+            width: 25px;
+            height: 25px;
+            background-color: #998;
+        }
+
+        .more3 {
+            width: 70px;
+            height: 70px;
+            background-color: rgba(128, 128, 115, 0.9);
+            border: none;
+            color: #fff;
+            cursor: pointer;
+
+        }
+
+        .more3:hover {
+            background-color: rgba(100, 0, 0, 0.7);
+        }

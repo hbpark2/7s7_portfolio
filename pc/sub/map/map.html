@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../common/css/common.css">
+    <link rel="stylesheet" href="map.css">
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9646e721dbb7c73561d274a617e1382a"></script>
+    <script src="map.js"></script>
+</head>
+<body>
+  
+   <div id="skipNav">
+        <a href="#content">본문 바로가기</a>
+        <a href="#gnb">글로벌네비게이션 바로가기</a>
+    </div>
+     <div class="wrapper">
+       
+        <!-- 헤더 삽입 영역 START-->
+
+        <? include "../common/data/header.html" ?>
+
+        <!-- 헤더 삽입 영역 END-->
+
+        <div class="header_back"></div>
+    <article id="content">
+            <h2 class="hidden">본문 컨텐츠</h2>
+            <dl>
+                <dt>
+                    <h3 class="sub_tit">오시는길</h3>
+                </dt>
+                <dd>
+                    <div id="map">
+
+
+
+                    </div>
+                </dd>
+            </dl>
+            <h3 class="tit">플라워 무드 광교 </h3>
+ 
+            <dl>
+
+                <dt>위치</dt>
+                <dd>경기도 수원시 영통구 센트럴파크로128번길 100 1층</dd>
+
+                <dt>이메일</dt>
+                <dd>hbpark2@naver.com</dd>
+
+                <dt>전화</dt>
+                <dd>010-2223-0833</dd>
+
+                <dt>영업시간</dt>
+                <dd>
+                    일요일 : 10:00 - 19:00<br>
+                    월요일 : OFF<br>
+                    화요일 : 10:00 - 19:00<br>
+                    수요일 : 10:00 - 19:00<br>
+                    목요일 : 10:00 - 19:00<br>
+                    금요일 : 10:00 - 19:00<br>
+                    토요일 : 10:00 - 19:00<br>
+                </dd>
+
+            </dl>
+            
+        </article>
+   <!-- 푸터 삽입 영역 START-->
+
+        <? include "../common/data/footer.html" ?>
+
+    <!-- 푸터 삽입 영역 END-->
+     
+    </div>
+    <script src="../../../js/jquery-1.12.4.min.js"></script>
+    <script src="../../../js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="../../../js/jquery-ui.min.js"></script>
+    <script src="../../nav_js.js"></script>
+</body>
+</html>

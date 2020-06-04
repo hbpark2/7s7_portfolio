@@ -1,0 +1,18 @@
+/* CSS Document */
+/*공지사항*/
+*{margin:0; padding:0;}
+a{text-decoration:none; color:#666}
+a:hover{color:#690}
+
+.faq{height:50px; background:#aa9;
+; margin-top:10px; font-family: 'Nanum Gothic', sans-serif;}
+.faq .notice_con{height:30px; margin:0 15px;line-height:1em; border-radius:7px; position:relative; top:10px; background:#fff;}
+.faq .notice_con h3{font-size:13px; font-weight:bold; color:#5c5c5c; padding:8px 6%;}
+.faq .notice_con .slide_box{width:67%; height:13px; overflow:hidden; position:absolute; left:30%; top:7px;}
+.faq .notice_con .slide_box .slide{position:absolute;}
+.faq .notice_con .slide ul{font-size:12px;}
+.faq .notice_con .slide ul li{height:13px; overflow:hidden; text-overflow:clip; -o-text-overflow:clip; margin-bottom:5px;}
+
+
+
+

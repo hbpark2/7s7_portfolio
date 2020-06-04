@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>flowermoods</title>
+    
+    <link rel="stylesheet" href="../common/css/common.css">
+    <link rel="stylesheet" href="cart.css">
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ibarra+Real+Nova&display=swap" rel="stylesheet">
+    
+    
+</head>
+
+<body>
+   <div id="skipNav">
+        <a href="#content">본문 바로가기</a>
+        <a href="#gnb">글로벌네비게이션 바로가기</a>
+    </div>
+    <div class="wrapper">
+        <!-- 헤더 삽입 영역 START-->
+
+        <? include "../common/data/header.html" ?>
+
+        <!-- 헤더 삽입 영역 END-->
+
+        <div class="header_back"></div>
+        <article id="content">
+            <h2 class="hidden">본문컨텐츠 영역</h2>
+
+            <span class="tit">Shoping cart</span>
+            <div class="shp_top">
+                <span class="selbox">선택상품 해제</span>
+                <span class="selbox">선택상품 찜</span>
+            </div>
+            <div class="shp_box">
+                <div class="shp_h">
+                    <div></div>
+                    <div>상품/옵션정보</div>
+                    <div>수량</div>
+                    <div>할인/적립</div>
+                    <div>결제 예정 금액</div>
+                    <div>배송비</div>
+                </div>
+                <div class="shp_b">
+                    <div></div>
+                    <div>
+                        <img src="../common/images/nb/prd_2.jpg" alt="">
+                        <p>청화각</p>
+                        <p><span>54,000</span>원</p>
+                    </div>
+                    <div>1개</div>
+                    <div></div>
+                    <div>5,4000원</div>
+                    <div>10000원 이상 배송비 0원 (택배-선결제)</div>
+                </div>
+            </div>
+            <div class="order_sec">
+
+                <div>
+                    <dl>
+                        <dt>총 상품금액</dt>
+                        <dd><span>0&nbsp;</span>WON</dd>
+                    </dl>
+                    <span>&#45;</span>
+                    <dl>
+                        <dt>총 할인금액</dt>
+                        <dd><span>0&nbsp;</span>WON</dd>
+                    </dl>
+                    <span>&#43;</span>
+                    <dl>
+                        <dt>배송비</dt>
+                        <dd><span>0&nbsp;</span>WON</dd>
+                    </dl>
+                    <span>&#61;</span>
+                    <dl>
+                        <dt>총 결제금액</dt>
+                        <dd><span>0&nbsp;</span>WON</dd>
+                    </dl>
+
+                </div>
+
+            </div>
+            <div class="pay_box">
+
+                <div>
+                    <a href="">선택상품 주문</a>
+                </div>
+
+                <div>
+                    <a href="">전체상품 주문</a>
+                </div>
+
+            </div>
+
+        </article>
+
+        <!-- 푸터 삽입 영역 START-->
+
+        <? include "../common/data/footer.html" ?>
+
+        <!-- 푸터 삽입 영역 END-->
+
+    </div>
+</body>
+
+</html>

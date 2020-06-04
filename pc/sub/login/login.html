@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>flowermood</title>
+    <link rel="stylesheet" href="../common/css/common.css">
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="skipNav">
+        <a href="#content">본문 바로가기</a>
+        <a href="#gnb">글로벌네비게이션 바로가기</a>
+    </div>
+    <div class="wrapper">
+       
+        <!-- 헤더 삽입 영역 START-->
+
+            <? include "../common/data/header.html" ?>
+
+        <!-- 헤더 삽입 영역 END-->
+        
+        
+        <div class="header_back"></div>
+        <div id="content">
+            <h2 class="hidden">본문컨텐츠영역</h2>
+            <div class="login_section">
+                <div class="login_title">
+                    <h3 class="tit">MEMBER LOGIN</h3>
+                    <p class="sub_tit">가입 시 입력하신 아이디와 비밀번호로 로그인이 가능합니다.</p>
+                </div>
+                <form action="">
+                    <fieldset>
+                        <input type="text" placeholder="  ID">
+                        <input type="password" placeholder="  PASSWORD">
+                        <input type="submit" value="로그인">
+                    </fieldset>
+                </form>
+
+                <div class="login_bottom">
+                    <div>
+                        <span><a href="#">아이디 찾기</a></span>
+                        <span><a href="#">비밀번호 찾기</a></span>
+                    </div>
+                    <a class="go_join" href="#">회원가입</a>
+                    <p>
+                        회원가입시 다양하고 특별한
+                        혜택이 준비되어 있습니다.
+                    </p>
+
+
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <h3 class="hidden">푸터 영역</h3>
+            <div class="footer_wrapper">
+                <div class="footer_box">
+                    <img class="logo" src="../common/images/logo.png" alt="로고이미지">
+                    <ul class="footer_text">
+                        <li>OPENING HOURS. AM10:00~PM20:00</li>
+                        <li>LUNCH BREAK. PX13:00~PM14:00</li>
+                        <li>MON OFF</li>
+                        <li>010-2223-0833</li>
+                        <li><a href="../mobile/index.html"><b>mobile.ver</b></a></li>
+                    </ul>
+                </div>
+                <ul class="footer_box footer_text">
+                    <li>COMPANY <b>Flowermood</b></li>
+                    <li>OWNER&amp;ADMIN <b>Jake</b></li>
+                    <li>BUSINESS NO. <b>212-6541-004562</b></li>
+                    <li>ONLINE-ORDER NO. <b>제 2018-용인기흥-0004호</b></li>
+                    <li>ADRESS <b>경기도 용인시 기흥구 구갈동 366-6</b></li>
+                    <li>TEL <b>010-2223-0833</b></li>
+                    <li>EMAIL <b>hbpark2@gmail.com</b></li>
+                </ul>
+            </div>
+
+        </footer>
+
+
+    </div>
+    
+    <script src="../../../js/jquery-1.12.4.min.js"></script>
+    <script src="../../../js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="../../../js/jquery-ui.min.js"></script>
+    <script src="../../nav_js.js"></script>
+</body>
+
+</html>
