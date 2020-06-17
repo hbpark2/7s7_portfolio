@@ -66,8 +66,8 @@
 	$sql = "update $table set hit=$new_hit where num=$num";   // 글 조회수 증가시킴
 	mysql_query($sql, $connect);
 ?>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="ko">
 
 <head>
     <meta charset="utf-8">
@@ -81,13 +81,12 @@
         }
 
     </script>
-    <script src="../nav_js.js"></script>
 </head>
 
 <body>
     <div id="wrap">
 
-        <? include "../sub/common/data/header.html" ?>
+        <? include "boardheader.html" ?>
         <div class="header_back"></div>
 
         <div id="content">
@@ -115,7 +114,7 @@
 		}
 	}
 ?>
-                <p>    <?= $item_content ?>    </p>
+                    <p> <?= $item_content ?> </p>
                 </div>
 
                 <div id="button">
@@ -142,10 +141,12 @@
 
             </div> <!-- end of col2 -->
         </div> <!-- end of content -->
-    <? include "../member/data/footer.html" ?>
+        <? include "../member/data/footer.html" ?>
 
     </div> <!-- end of wrap -->
-
+    <script src="../../js/jquery-1.12.4.min.js"></script>
+    <script src="../../js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="../nav_js.js"></script>
 </body>
 
 </html>

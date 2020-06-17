@@ -27,14 +27,6 @@
             });
       
       
-      
-      
-      
-      
-      
-      
-      
-      
       var screenSize = $(window).width();
       var screenHeight = $(window).height();
       var current = false;

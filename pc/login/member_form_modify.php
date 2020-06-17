@@ -6,7 +6,7 @@
     @extract($_SESSION);
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 
 <head>
     <meta charset="utf-8">

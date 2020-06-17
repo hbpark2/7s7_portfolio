@@ -413,7 +413,7 @@ section {
     display: block;
     margin: 15px 0;
     bottom: 10%;
-    width: 60%;
+    width: 450px;
     height: 50px;
     float: right;
     line-height: 50px;
@@ -462,7 +462,7 @@ section {
 
 .project_2 .inner {
     width: 90%;
-    margin: 3% auto;
+    margin: 8% auto;
     overflow: hidden;
 }
 

@@ -27,8 +27,8 @@
 		$copied_file_2 = $row[file_copied_2];
 	}
 ?>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="ko">
 
 <head>
     <meta charset="utf-8">
@@ -56,7 +56,7 @@
 <body>
     <div id="wrap">
 
-        <? include "../sub/common/data/header.html" ?>
+        <? include "boardheader.html" ?>
         <div class="header_back"></div>
 
         <div id="content">
@@ -170,7 +170,9 @@
                                     <? include "../member/data/footer.html" ?>
 
     </div> <!-- end of wrap -->
-
+    <script src="../../js/jquery-1.12.4.min.js"></script>
+    <script src="../../js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="../nav_js.js"></script>
 </body>
 
 </html>
