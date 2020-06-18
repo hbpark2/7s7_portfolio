@@ -95,7 +95,7 @@
       var screenSize = $(window).width();
 
       $(window).on('scroll', function () {
-          console.log($(document).scrollTop())
+//          console.log($(document).scrollTop())
           
           if ($(document).scrollTop() > screenHeight) {
               $("#headerArea").css({
