@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flowermood</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <script src="../../js/jquery-3.4.1.js"></script>
+    <script src="../../js/jquery-ui.min.js"></script>
+    <script>
+    
+        $(document).ready(function(){
+            
+            
+            
+        })
+    
+    </script>
+    <style>
+        /* Common */ 
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        html, body{
+            width: 100%;
+            height: 100%;
+        }
+        body{
+            background-color: #333;
+            transition: 1s;
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+        a{
+            text-decoration: none;
+        }
+        @media screen and (min-width:1200px) {
+
+            /*데스크탑*/
+            body {
+                background-color: #515151;
+            }
+        }
+
+        @media screen and (max-width:480px) {
+
+            /*핸드폰*/
+            body {
+                background-color: #515151;
+            }
+        }
+
+        @media screen and (min-width:480px) and (max-width:1200px) {
+
+            /*태블릿*/
+            body {
+                background-color: #515151;
+            }
+        }
+    /* Common END */ 
+        
+        #wrapper{
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            background-image: url(Flowermood/main_5.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        header{
+            width: 100%;
+            height: 20%;
+            
+        }
+        nav{
+            width: 95%;
+            height: 40%;
+            padding-top: 10%;
+            padding-left: 5%;
+        }
+        input[type="checkbox"]{
+            display: none;
+        }
+        @keyframes menuAni{
+            0%{
+                transform: scale(1);
+            }
+            50%{
+                transform: scale(0.8);
+            }
+            100%{
+                transform: scale(1);
+            }
+        }
+        label{
+            position: relative;
+            z-index: 3;
+            display: block;
+            width: 50px;
+            height: 50px;
+            float: left;
+            background-image: url(Flowermood/menu_2.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 55px;
+            transition: 1s;
+            border-radius: 20px;
+            box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+        }
+        #menu:checked + label{
+            transform: rotate(180deg);
+            box-shadow: -5px -5px 10px rgba(0,0,0,0.5);
+/*
+            animation-name: menuAni;
+            animation-duration: 1s;
+*/
+        }
+        #menu:checked ~ .menuBox{
+            left: 0px;
+        }
+        .loginSpan{
+            display: block;
+            width: 100px;
+            height: 50px;
+            text-align: center;    
+            line-height: 50px;
+            float: right;
+            
+        }
+        .loginSpan>a{
+            font-weight: 500;
+            font-size: 0.8em;
+            color: #ffe;
+        }
+        section{
+            position: absolute;
+            top: 80%;
+            width: 100%;
+            height: 110px;
+            }
+        section>div{
+            margin: 5px auto;
+            width:90%;
+            height: 48px;
+            line-height: 48px;
+            text-align: center;
+            border-radius: 35px;
+            background-color: rgba(0,0,0,0.8);
+        }
+        section>div>a{
+            color: #ffe;
+            font-weight: 500; 
+        }
+        .menuBox{
+            position: absolute;
+            top: 0;
+            left:-51%;
+            width: 51%;
+            height: 100%;
+            background-color: rgba(255,255,240,0.7);
+            transition: 1s;
+        }
+        .menuBox>ul{
+            position: relative;
+            width: 100%;
+            top:20%;
+            height: 50%;
+            background-color: rgba(100,100,100,0.9);
+        }
+        .menuBox>ul>li{
+            width: 100%;
+            text-align: center;
+            height: 50px;
+            line-height: 50px;
+            font-size: 0.9em;
+            color: #ffe;
+        }
+        .menuBox>ul>li>img{
+            display: block;
+            float: right;
+            position: relative;
+            top: 18px;
+            right: 5px;
+            width: 8px;
+            height: 13px;
+            transition: 0.5s;
+        }
+        #mbox,#bbox>li{
+            height: 30px;
+            line-height: 30px;
+        }
+        #mbox,#bbox{
+            display: none;
+            opacity: 0;
+            transition: 0.5s;
+
+        }
+        #mBtn{
+            position: relative;
+            z-index: 5;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        
+        <header>
+            <nav>
+                <input id="menu" type="checkbox">
+                <label for="menu"></label>
+                <span class="loginSpan"><a href="flowermood_etc/login.html">Log in</a></span>
+                
+                <div class="menuBox">
+                    <ul>
+                        <li>
+                            About us 
+                            <img src="flowermood/rightfff.png" alt="">
+                        </li>
+                        <li>
+                            Online Shop 
+                            <img src="flowermood/rightfff.png" alt="">
+                        </li>
+                        
+                        <li id="bBtn" onclick="bBtn()">
+                            Board 
+                            <img src="flowermood/rightfff.png" alt="">
+                            <ul b_height="3" id="bbox">
+                                <li>Notice</li>
+                                <li>FNQ</li>
+                                <li>QNA</li>
+                            </ul>
+                        </li>
+                        
+                        <li id="mBtn" onclick="mBtn()">
+                            Mypage
+                            <img src="flowermood/rightfff.png" alt="">
+                            <ul b_height="4" id="mbox">
+                                <li>My page</li>
+                                <li>Order</li>
+                                <li>Wish list</li>
+                                <li>Delivery</li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+                
+            </nav>
+            
+        </header>
+
+
+        <section>
+            <div class="goBox1"><a href="flowermood_etc/signup.html">Sign up</a></div>
+            <div class="goBox2"><a href="flowermood_etc/online_store.html">Go Shopping</a></div>
+        </section>
+        
+        
+    </div>
+<script>
+                        
+        var chk = true;
+        var chk1 = true;
+        function mBtn(){
+            var hh = 0;
+            var dh = 50
+            var ro = "rotate(0deg)"
+
+            if(chk){
+            hh = 1;
+                dh = 200;
+                ro = "rotate(90deg)"
+            }
+
+            $("#mbox").css('opacity',hh)
+            $("#mbox").css('display',"block")
+            $("#mBtn").stop().animate({height:dh},1000)
+            $("#mbox").css({
+                height:dh
+            })
+            $("#mBtn>img").css({
+                transform: ro
+            })
+            
+            chk = !chk
+
+        }
+        
+        function bBtn(){
+            var hh = 0;
+            var dh = 50
+            var ro = "rotate(0deg)"
+            if(chk1){
+                hh = 1;
+                dh = 150;
+                ro = "rotate(90deg)"
+            }
+
+            $("#bbox").css('opacity',hh)
+            $("#bbox").css('display',"block")
+            $("#bBtn").stop().animate({height:dh},1000)
+            $("#bbox").css({
+                height:dh
+            })
+            $("#bBtn>img").css({
+                transform: ro
+            })
+            
+            chk1 = !chk1
+
+        }
+                        
+</script>
+</body>
+</html>

@@ -12,7 +12,7 @@
        
        $(window).on('scroll', function(){
            
-           console.log($(document).scrollTop())
+//           console.log($(document).scrollTop())
            if($(document).scrollTop()>500){
                 $(".nb_prd_wr").css({
                     opacity:1,

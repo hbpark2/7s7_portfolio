@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flowermood</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <script src="../../../js/jquery-3.4.1.js"></script>
+    <script src="../../../js/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            
+            for(i=2; i<5; i++){
+                $(".prd_"+i+"").css({
+                left: (i*100)-100 + "%"
+            })
+            }
+            
+        })
+
+    </script>
+    <style>
+        /* Common */
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            background-color: #515151;
+            transition: 1s;
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+        a{
+            text-decoration: none;
+        }
+        @media screen and (min-width:1200px) {
+
+            /*데스크탑*/
+            body {
+                background-color: #515151;
+            }
+        }
+
+        @media screen and (max-width:480px) {
+
+            /*핸드폰*/
+            body {
+                background-color: #515151;
+            }
+        }
+
+        @media screen and (min-width:480px) and (max-width:1200px) {
+
+            /*태블릿*/
+            body {
+                background-color: #515151;
+            }
+        }
+
+        /* Common END */
+
+        #wrapper {
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            background-image: url(../Flowermood/gausian.jpg);
+        }
+
+        header {
+            width: 100%;
+            height: 20%;
+
+        }
+
+        nav {
+            width: 95%;
+            height: 10%;
+            padding-top: 10%;
+            padding-left: 5%;
+        }
+        nav>a>img{
+            width: 10px;
+            height: 20px;
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+        section{
+            position: absolute;
+            width: 100%;
+            height: 80%;
+        }
+        .welc{
+            margin-top: 20px;
+            margin-left: 41px;
+            font-size: 1.4em;
+            font-weight: 600;
+            color: #fff;
+        }
+        
+        fieldset{
+            width: 80%;
+            margin: 20px auto;
+            border: none;
+        }
+        label{
+            display: block;
+            color: #fff;
+            font-weight: 600;
+        }
+        input:focus{
+            outline:none;
+        }
+        input{
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+            border: none;
+            background-color: transparent;
+            border-bottom: 2px solid #fff;
+            color: #fff;
+        }
+        .goBox{
+            margin-top: 50px;
+            width: 100%;
+        }
+        .goBox>button{
+            display: block;
+            width: 80%;
+            height: 40px;
+            line-height: 40px;
+            border: none;
+            border-radius: 15px;
+            text-align: center;
+            margin: 10px auto;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        button:focus{
+            display: none;
+        }
+        .lbox{
+            background-color: #333;
+            color: #fff;
+            box-shadow: 5px 5px 5px rgba(155,155,155,0.5);
+        }
+        .sbox{
+            background-color: #fff;
+            color: #333;
+            box-shadow: 5px 5px 5px rgba(155,155,155,0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+
+        <nav>
+        
+            <a href="../index.html"><img src="../Flowermood/leftfff.png" alt=""></a>
+
+        </nav>
+
+        <section>
+            
+            <p class="welc">
+                Log Into <br>
+                your account
+            </p>
+            
+            <form action="">
+                
+                <fieldset>
+                    <label for="pid">ID</label>
+                    <input id="pid" name="pid" type="text">
+                    
+                </fieldset>
+                <fieldset>
+                    <label for="pw">PW</label>
+                    <input id="pw" name="pw" type="password">
+                    
+                </fieldset>
+                
+            </form>
+            
+            <div class="goBox">
+                <button class="lbox">Log in</button>
+                <button class="sbox">Sign up</button>
+            </div>
+            
+        </section>
+
+    </div>
+</body>
+
+</html>

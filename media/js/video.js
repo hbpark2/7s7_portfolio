@@ -1,37 +1,19 @@
   $(document).ready(function () {
       
-      
-      $("#mBtn").toggle(function() {
-                $("nav").slideDown('slow');
-            }, function() {
-                $("nav").slideUp('fast');
-            });
-
-            //********************************이게중요함******************************// 
-
-            var current = 0;    // 가정법 : 임의로 값을 정하고 (0,1)
-                                    // 0 -> 서브메뉴가 열려있을 때
-                                    // 1 -> 서브메뉴가 닫혀있을 때
-                                        
-            
-            $(window).resize(function() {
-                var screenSize = $(window).width();
-                if (screenSize > 640) {
-                    $("nav").show();
-                    current = 1;
-                }
-                if (current == 1 && screenSize < 640) {
-                    $("nav").hide();
-                    current = 0;
-                }
-            });
-      
-      
       var screenSize = $(window).width();
       var screenHeight = $(window).height();
       var current = false;
-
+      
       $("#content").css('margin-top', screenHeight);
+
+      $("#mBtn").toggle(function () {
+          $("nav").slideDown('slow');
+      }, function () {
+          $("nav").slideUp('fast');
+      });
+
+      
+
 
       if (screenSize > 768) {
           $("#videoBG").show();
@@ -43,26 +25,40 @@
           $("#imgBG").show();
       }
       $(".cast>ul>li").children("span").height($(".cast_left>li").height())
-                        $(".cast>ul>li").children("span").width($(".cast_left>li").width())
-                        //                        $(".cast_left>li").children("span").css({backgroundColor:"#fff",top: pos} )
-                        $(".cast>ul>li").hover(
-                            function() {
-                                $(this).children(".cast_bg").addClass("cast_bghover")
-                                $(this).children(".cast_bg").css({
-                                    transform: 'scale(0.9)'
-                                })
-                            },
-                            function() {
-                                $(this).children(".cast_bg").removeClass("cast_bghover")
-                                $(this).children(".cast_bg").css({
-                                    transform: 'scale(1)'
-                                })
-                            }
+      $(".cast>ul>li").children("span").width($(".cast_left>li").width())
+      //                        $(".cast_left>li").children("span").css({backgroundColor:"#fff",top: pos} )
+      $(".cast>ul>li").hover(
+          function () {
+              $(this).children(".cast_bg").addClass("cast_bghover")
+              $(this).children(".cast_bg").css({
+                  transform: 'scale(0.9)'
+              })
+          },
+          function () {
+              $(this).children(".cast_bg").removeClass("cast_bghover")
+              $(this).children(".cast_bg").css({
+                  transform: 'scale(1)'
+              })
+          }
 
-                        )
-      $(window).resize(function () { //웹브라우저 크기 조절시 반응하는 이벤트 메소드()
-          screenSize = $(window).width();
-          screenHeight = $(window).height();
+      )
+
+      $(window).resize(function () {
+
+          var subMenu = 0; 
+          // 가정법 : 임의로 값을 정하고 (0,1)
+          // 0 -> 서브메뉴가 열려있을 때
+          // 1 -> 서브메뉴가 닫혀있을 때
+
+          var screenSize = $(window).width();
+          if (screenSize > 640) {
+              $("nav").show();
+              subMenu = 1;
+          }
+          if (subMenu == 1 && screenSize < 640) {
+              $("nav").hide();
+              subMenu = 0;
+          }
 
           $("#content").css('margin-top', screenHeight);
 
@@ -79,7 +75,7 @@
               $("#imgBG").show();
               current = false;
           }
-          
+
       });
 
       $('.down').click(function () {
@@ -95,21 +91,19 @@
       var screenSize = $(window).width();
 
       $(window).on('scroll', function () {
-//          console.log($(document).scrollTop())
-          
+          //          console.log($(document).scrollTop())
+
           if ($(document).scrollTop() > screenHeight) {
               $("#headerArea").css({
                   backgroundColor: '#000'
               })
               $(".top_btn").css({
-                  opacity:1
+                  opacity: 1
               })
           }
 
           if (screenSize > 1024) {
-              
-              
-              
+
               if ($(document).scrollTop() > 800) {
                   //900
                   $(".intro_box").css({
@@ -123,7 +117,7 @@
                       $(".cast>ul>li:nth-of-type(" + i + ")").delay(i * 150).animate({
                           opacity: 1
                       }, 1000)
-                      
+
                   }
 
               }
@@ -164,7 +158,7 @@
                       $(".last_cast").delay(700).animate({
                           opacity: 0.8
                       }, 1000)
-                      
+
                   }
 
               }
@@ -187,8 +181,8 @@
               }
 
           }
-          
-          
+
+
 
 
           //partners 위아래가운데정렬

@@ -469,9 +469,8 @@ section {
 .project_2 > .inner > .desktop {
     position: relative;
     width: 50%;
-    margin-top: 7%;
     float: left;
-    margin-top: 5%;
+    margin-top: 0;
     z-index: 5;
 }
 
@@ -558,9 +557,11 @@ section {
     .project a {
         bottom: 0;
     }
-
+    .project > .inner > .desktop {
+        margin-top: 13%;
+    }
     .project_3 a {
         bottom: 5%;
     }
-
+    
 }
