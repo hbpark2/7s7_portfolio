@@ -36,7 +36,7 @@ xhr.onload = function() {
   //}
 };
 
-xhr.open('GET', 'data/s3_data.json', true);        
+xhr.open('GET', 'json/s3_data.json', true);        
 xhr.send(null);                                 
 
 

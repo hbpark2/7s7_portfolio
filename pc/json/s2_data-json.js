@@ -34,6 +34,6 @@ xhra.onload = function() {
   //}
 };
 
-xhra.open('GET', 'data/s2_data.json', true);        
+xhra.open('GET', 'json/s2_data.json', true);        
 xhra.send(null);       
 
