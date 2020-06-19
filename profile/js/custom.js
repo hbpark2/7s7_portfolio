@@ -100,7 +100,7 @@ $(document).ready(function () {
             if($(window).scrollTop()>960){
                 $("html,body").stop().animate({
                 "scrollTop": $prev
-                }, 500);
+                }, 300);
             }
             return false;
 
@@ -113,7 +113,7 @@ $(document).ready(function () {
             
                 $("html,body").stop().animate({
                     "scrollTop": $next
-                }, 500);
+                }, 300);
             return false;
 
         }
