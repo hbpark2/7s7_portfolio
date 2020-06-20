@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="ko">
-
+ <!--
+    Profile 페이지를 제외한 포트폴리오 사이트는
+    IE 까지 크로스 브라우징을 위해 
+    defer, const, let등의 ES6이후의 
+    나온 것들을 사용하지 않았습니다. 
+-->
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=9">
     <meta charset="UTF-8">
@@ -8,13 +13,9 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
-
-    <!--IE 까지 크로스 브라우징을 위해 defer, const, let등의 ES6이후의 나온 것들을 사용하지 않았습니다. -->
-    <script src="../js/jquery-1.12.4.min.js"></script>
-    <script src="../js/jquery-migrate-1.4.1.min.js"></script>
     <script src="js/prefixfree.min.js"></script>
     <script src="js/typer.js"></script>
-    <script src="js/custom.js"></script>
+    <script defer src="js/custom.js"></script>
     <script src="https://kit.fontawesome.com/e39232b629.js" crossorigin="anonymous"></script>
 
 </head>
@@ -133,10 +134,12 @@
                         미디어쿼리를 이용한 반응형 사이트 제작에 흥미가 있습니다.<br>
                         모바일 전용 사이트 제작 (디바이스별 호환)
                     </dd>
-                    <dt><i class="fab fa-js-square"></i>javascript + jQuery</dt>
+                    <dt><i class="fab fa-js-square"></i>VanillaJS &amp; jQuery</dt>
                     <dd>
-                        기존에 있는 플러그인들을 이해하려 노력하고,<br>
-                        기본적인 것부터 다듬으며 꾸준히 공부중입니다!
+                        처음 공부할 때 jQuery를 곁들여 시작하고 의지했지만, 
+                        VanillaJS의 중요함을 깨닫고 치열히 공부중입니다.<br>
+                        지금 보시는 Profile site 또한 제이쿼리로 시작했지만,
+                        보시는 바와 같이 VanillaJS로 탈바꿈했습니다!
                     </dd>
                     <dt><i class="fab fa-php"></i>php+mySql</dt>
                     <dd>
@@ -182,7 +185,7 @@
                         <dd>2019.12.14 ~ 2020.01.04 &#40;3 WEEK&#41;</dd>
                         <dt>제작기술</dt>
                         <dd>
-                            Adobe Photoshop, Illustrator
+                            Adobe Photoshop, Illustrator,
                             HTML5/CSS3, Javascript, jQuery, Ajax(Json), php(in clude), 그누보드(게시판)
                             W3C 웹표준 마크업 검사, 웹접근성검사(K-WAH), 크로스브라우징 완료
                         </dd>
@@ -216,8 +219,8 @@
                         <dd>2020.02.14 ~ 2020.02.18 &#40;4 DAYS&#41;</dd>
                         <dt>제작기술</dt>
                         <dd>
-                            Adobe Photoshop, Illustrator
-                            HTML5/CSS3, Javascript, jQuery, Ajax(Json), php(in clude), 그누보드(게시판)
+                            Adobe Photoshop, Illustrator, 
+                            HTML5/CSS3, Javascript, jQuery,
                             W3C 웹표준 마크업 검사, 웹접근성검사(K-WAH), 크로스브라우징 완료
                         </dd>
                     </dl>
@@ -241,7 +244,7 @@
                     <p><strong>LOVING VINCENT RESPONSIVE</strong> <br> 웹사이트 제작</p>
                     <p>
                         사이트 기획의도 : 애니메이션 "lovinvincent"를 주제로 한 사이트로써,<br>
-                        다양한 디바이스에서 쾌적하게 이용할 수 있도록<br>
+                        각각의 해상도에서 쾌적하게 이용할 수 있도록<br>
                         반응형 웹을 구축하였습니다.
                     </p>
                     <a href="http://hbpark2.cafe24.com/media/index.html" target="_blank" title="loving_vincent사이트 바로가기">VIEW SITE</a>
@@ -250,8 +253,8 @@
                         <dd>2020.03.12 ~ 2020.03.18 &#40;1 WEEK&#41;</dd>
                         <dt>제작기술</dt>
                         <dd>
-                            Adobe Photoshop, Illustrator
-                            HTML5/CSS3, Javascript, jQuery, Ajax(Json), php(in clude), 그누보드(게시판)
+                            Adobe Photoshop, Illustrator,
+                            HTML5/CSS3, Javascript, jQuery
                             W3C 웹표준 마크업 검사, 웹접근성검사(K-WAH), 크로스브라우징 완료
                         </dd>
                     </dl>
@@ -274,8 +277,8 @@
                 <div class="desc">
                     <p><strong>TRENDIR WORDPRESS</strong> <br> 웹사이트 제작</p>
                     <p>
-                        사이트 기획의도 : 평소 관심있던 주제를 워드프레스 사이트에서<br>
-                        접목해서 컨셉을잡고 디자인을 해보고싶어서 진행했습니다.
+                        사이트 기획의도 : 평소 관심있던 주제를 워드프레스 사이트에<br>
+                        접목해 컨셉을잡고 디자인을 해보고싶어서 진행했습니다.
                     </p>
                     <a href="http://hbpark22.dothome.co.kr/wp/" target="_blank" title="wordpress사이트 바로가기">VIEW SITE</a>
                     <dl>
@@ -283,8 +286,7 @@
                         <dd>2019.03.21 ~ 2020.03.24 &#40;3 DAYS&#41;</dd>
                         <dt>제작기술</dt>
                         <dd>
-                            Adobe Photoshop, Illustrator
-                            HTML5/CSS3, Javascript, jQuery, Ajax(Json), php(in clude), 크로스브라우징 완료
+                            Adobe Photoshop, Illustrator, Wordpress
                         </dd>
                     </dl>
 

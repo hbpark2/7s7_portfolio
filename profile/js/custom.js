@@ -1,112 +1,172 @@
-$(document).ready(function () {
-
-    var el = document.querySelector('.main-text')
-    var options = {
+    let el = document.querySelector('.main-text')
+    let options = {
         text: '안 녕 하 세 요 ! \n 웹 ─ 퍼 블 리 셔 박 형 빈 의 \n 포 트 폴 리 오 페 이 지 입 니 다.',
         textSpeed: 110,
         blinkSpeed: 0.06
     }
 
-    var instance = new tinytyper(el, options);
+    let instance = new tinytyper(el, options);
 
-    //변수 ht에 브라우저의 높이값을 저장
-    var ht = $(window).height();
+    //변수 windowHeight에 브라우저의 높이값을 저장
+    const windowHeight = window.innerHeight + 'px';
+
     //브라우저의 높이값을 section의 높이값으로 지정
-    $("section").height(ht);
+    let section = document.querySelectorAll('section')
+
+    for (let i = 0; i < section.length; i++) {
+        section[i].style.height = windowHeight
+    }
 
     //브라우저가 리사이즈 될 때마다 브라우저와 section의 높이값을 갱신
-    $(window).on("resize", function () {
-        $("section").height(ht);
-    });
+    window.addEventListener('resize', function () {
+        for (let i = 0; i < section.length; i++) {
+            section[i].style.height = windowHeight
+        }
+    })
+
+
+    
+    
+    /* Get a index number from siblings */
+    function getIndex(jake) {
+        let _i = 0;
+        while ((jake = jake.previousSibling) != null) {
+            _i++;
+        }
+
+        return parseInt(_i / 2);
+    }
+    
+    /* jQuery의 index()메소드 ==> VanillaJS */
+    //  1. 0의 값을 가지는 변수 _i를 선언
+    //  2. while 루프를 사용하여 현재 요소의 이전 요소를 찾음
+    //  3. 이 전 요소가 있으면 _i에 1을 더하기
+    //  4. 만약 이 전 요소가 없는 경우 루프를 종료
+    //  5. _i는 이 전 요소의 개수 만큼이므로 이를 반환함.
 
 
     /*  주 메뉴 클릭시 자동으로 상하 스크롤 시키기  */
+    let menuBtn = document.querySelectorAll('#menu li')
+    menuBtn.forEach(function (liitem) {
+        liitem.addEventListener('click', function (e) {
 
-    //메뉴 버튼 클릭시
-    $("#menu li").on("click", function (e) {
-        e.preventDefault(); // a태그 기본속성 삭제
+            e.preventDefault();
+            //  1. a태그의 기본속성을 제거
 
 
-        //변수 i에 현재 클릭한 li의 순서값을 저장
-        var i = $(this).index();
+            let liIndex = getIndex(this);
+            //  2. 선택한 인덱스넘버 호출
 
-        //브라우저의 높이값*박스의 순서값은 현재 박스의 스크롤 위치값과 동일
-        var nowTop = i * ht;
+            let nowTop = liIndex * parseInt(windowHeight);
+            //  3. 인덱스넘버 * 스크린의 높이로 이동할 거리 구함
+            //  console.log(nowTop);            
+            window.scrollTo({
+                top: nowTop,
+                behavior: 'smooth'
+            });
+            //  4. 이동
+        });
 
-        //해당 스크롤 위치값으로 문서를 이동
-        $("html,body").stop().animate({
-            "scrollTop": nowTop
-        }, 1400);
     });
 
 
-    /*	화면이 스크롤 될때마다 현재 영역에 해당하는 메뉴 활성화하기 */
 
-    $(window).on("scroll", function () {
 
-        //변수 scroll에 현재 문서가 스크롤된 거리 저장
-        var scroll = $(window).scrollTop();
-        // scroll이 0보다 크면 메뉴가 안보이는 조건문
-        if (scroll > 0) {
-            $("#menu").stop().animate({
-                opacity: 1
-            }, 500)
+    /*	화면이 스크롤 될 때 현재 영역에 해당하는 메뉴 활성화하기 */
+
+    window.addEventListener('scroll', function () {
+        const nowScroll = window.scrollY;
+        const topMenu = document.querySelector('#menu')
+        const topMenuLi = document.querySelectorAll('#menu li')
+        const topMenuA = document.querySelectorAll('#menu a')
+        const ht = window.innerHeight
+        
+        // 첫화면에서는 메뉴를 안보이게 설정한다.    
+        if (nowScroll > 0) {
+            topMenu.style.opacity = 1
         } else {
-            $("#menu").stop().animate({
-                opacity: 0
-            }, 500)
+            topMenu.style.opacity = 0
         }
-        if (scroll > 4000 && scroll < 5000) {
-            $("#menu a").css({
-                color: '#fff'
-            })
+        // 이 구간에 서는 폰트컬러를 달리해야 한다.
+        if (nowScroll > 4000 && nowScroll < 5000) {
+            Array.prototype.forEach.call(topMenuA, (elem) => {
+                elem.style.color = '#fff'
+            });
         } else {
-            $("#menu a").css({
-                color: '#333'
-            })
+            Array.prototype.forEach.call(topMenuA, (elem) => {
+                elem.style.color = '#333'
+            });
         }
-        for (var i = 0; i < 7; i++) {
-            if (scroll >= ht * i && scroll < ht * (i + 1)) {
-                $("#menu li").removeClass();
-                $("#menu li").eq(i).addClass("on");
+        //기존의 li의 class를 모두 지우고 현재 섹션의 li에만 class를 부여한다.
+        for (let a = 0; a < topMenuLi.length; a++) {
+            topMenuLi[a].classList.remove('on')
+            if (nowScroll >= ht * a && nowScroll < ht * (a + 1)) {
+                topMenuLi[a].classList.toggle('on')
             };
         }
 
-
     });
 
-    //인터넷익스플로러, 크롬, 사파리, 오페라, 엣지, 파이어폭스 / IE, Chrome, safari, Opera, Edge, Firefox
-    $('section').on("mousewheel DOMMouseScroll", function (e) {
-        var wheelData_c = e.originalEvent.wheelDelta
-        var wheelData_f = e.originalEvent.detail
-        //마우스 휠을 올렸을때	
-        if (wheelData_c > 0 || wheelData_f < 0) {
-            var $prev = $(this).prev().offset().top;
-            //            console.log($prev)
-            //문서 전체를 prev에 저장된 위치로 이동
-            if ($(window).scrollTop() > 960) {
-                $("html,body").stop().animate({
-                    "scrollTop": $prev
-                }, 300);
+
+    /*
+        mousewheel 이벤트는 
+        다른 브라우저들과 firefox의 사용법이 
+        다소 상이하기 때문에 브라우저를 인식해서
+        작동하는 함수를 만들었습니다!
+    */
+    const userAgent = window.navigator.userAgent.toLowerCase(); 
+    const isChrome = userAgent.indexOf('chrome');
+    const isFirefox = userAgent.indexOf('firefox');
+    let checkVer = '';
+
+    if(isChrome>0)
+    checkVer = 'mousewheel';
+    
+    if(isFirefox>0)
+    checkVer = 'DOMMouseScroll';
+    
+    console.log(checkVer)
+    function verScroll(browser){
+        for (let b = 0; b < section.length; b++) {
+        section[b].addEventListener(browser, function (e) {
+            e.preventDefault();
+            if(browser == 'mousewheel'){
+                let wheelData = e.wheelDelta
+
+                if (wheelData > 0 && window.scrollY > 960) {
+                    let prev = this.previousElementSibling.offsetTop;                
+                    window.scrollTo({
+                        top: prev, behavior: 'smooth'
+                    })
+                }
+                else if(wheelData < 0 && window.scrollY < 5000){
+                    let next = this.nextElementSibling.offsetTop;                
+                    window.scrollTo({
+                        top: next, behavior: 'smooth'
+                    })
+                }
             }
-            return false;
+            else if(browser == 'DOMMouseScroll'){
+                let wheelData = e.detail
 
-            //마우스 휠을 내렸을때	 
-        } else if (wheelData_c < 0 && $(window).scrollTop() < 5000 || wheelData_f > 0) {
+                if (wheelData < 0 && window.scrollY > 960) {
+                    let prev = this.previousElementSibling.offsetTop;                
+                    window.scrollTo({
+                        top: prev, behavior: 'smooth'
+                    })
+                }
+                else if(wheelData > 0 && window.scrollY < 5000){
+                    let next = this.nextElementSibling.offsetTop;                
+                    window.scrollTo({
+                        top: next, behavior: 'smooth'
+                    })
+                }
+            }
 
-            //변수 next에 현재 휠을 움직인 section에서 다음 section의 offset().top위치 저장
-            var $next = $(this).next().offset().top;
-            //문서 전체를 next에 저장된 위치로 이동
-
-            $("html,body").stop().animate({
-                "scrollTop": $next
-            }, 300);
-            return false;
+        })
 
         }
+    }
+    verScroll(checkVer)
 
-    });
-
-
-});
 
