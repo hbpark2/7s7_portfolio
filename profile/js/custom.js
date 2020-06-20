@@ -1,12 +1,3 @@
-    let el = document.querySelector('.main-text')
-    let options = {
-        text: '안 녕 하 세 요 ! \n 웹 ─ 퍼 블 리 셔 박 형 빈 의 \n 포 트 폴 리 오 페 이 지 입 니 다.',
-        textSpeed: 110,
-        blinkSpeed: 0.06
-    }
-
-    let instance = new tinytyper(el, options);
-
     //변수 windowHeight에 브라우저의 높이값을 저장
     const windowHeight = window.innerHeight + 'px';
 
@@ -24,9 +15,6 @@
         }
     })
 
-
-    
-    
     /* Get a index number from siblings */
     function getIndex(jake) {
         let _i = 0;
@@ -169,4 +157,11 @@
     }
     verScroll(checkVer)
 
+    let el = document.querySelector('.main-text')
+    let options = {
+        text: '안 녕 하 세 요 ! \n 웹 ─ 퍼 블 리 셔 박 형 빈 의 \n 포 트 폴 리 오 페 이 지 입 니 다.',
+        textSpeed: 110,
+        blinkSpeed: 0.06
+    }
 
+    let instance = new tinytyper(el, options);
