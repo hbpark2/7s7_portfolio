@@ -65,5 +65,6 @@ function verScroll(browser) {
 
         })
     }
+    
 }
 verScroll(checkVer)
