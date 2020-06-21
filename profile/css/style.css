@@ -294,6 +294,27 @@ section {
     text-align: center;
     margin-top: 10px;
 }
+.makeplugin{
+    position: absolute;
+    width: 300px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    margin-left: -150px;
+    margin-right: -25px;
+    border: 2px solid #333;
+    text-align: center;
+    line-height: 50px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all .5s;
+}
+.makeplugin:hover{
+    background-color: #800;
+    border-color: #800;
+    color: #fff;
+    left: 49%;
+}
 .profile_center a{
     display: block;
     padding: 10px 0;
@@ -543,7 +564,28 @@ section {
         font-size: 38px;
         line-height: 2em;
         padding-top: 25%;
-
+    }
+    .makeplugin{
+        position: absolute;
+        width: 150px;
+        height: 50px;
+        top: 50%;
+        left: 50%;
+        margin-left: -85px;
+        margin-right: -25px;
+        border: 2px solid #333;
+        text-align: center;
+        line-height: 2em;
+        font-weight: 600;
+        font-size: 13px;
+        transition: all .5s;
+        padding: 0 10px;
+    }
+    .makeplugin:hover{
+        background-color: #800;
+        border-color: #800;
+        color: #fff;
+        left: 49%;
     }
     .profile_center{
         top: 65%;
