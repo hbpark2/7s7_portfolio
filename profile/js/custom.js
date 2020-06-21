@@ -108,8 +108,6 @@ if (isChrome > 0)
 if (isFirefox > 0)
     checkVer = 'DOMMouseScroll';
 
-console.log(checkVer)
-
 function verScroll(browser) {
     let wheelData;
     let currTop;
