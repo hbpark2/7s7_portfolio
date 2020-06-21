@@ -15,6 +15,9 @@
         }
     })
 
+
+
+
     /* Get a index number from siblings */
     function getIndex(jake) {
         let _i = 0;
@@ -24,16 +27,13 @@
 
         return parseInt(_i / 2);
     }
-    
+
     /* jQuery의 index()메소드 ==> VanillaJS */
     //  1. 0의 값을 가지는 변수 _i를 선언
     //  2. while 루프를 사용하여 현재 요소의 이전 요소를 찾음
     //  3. 이 전 요소가 있으면 _i에 1을 더하기
     //  4. 만약 이 전 요소가 없는 경우 루프를 종료
     //  5. _i는 이 전 요소의 개수 만큼이므로 이를 반환함.
-    //  6. 이론상 그렇지만 이상하게 1,3,5,7...이런식으로 늘어나길래
-    //     2로 나누고 정수로만드는 함수 parseInt()를 써서
-    //     문제없이 동작하게 만들었다.
 
 
     /*  주 메뉴 클릭시 자동으로 상하 스크롤 시키기  */
@@ -71,7 +71,7 @@
         const topMenuLi = document.querySelectorAll('#menu li')
         const topMenuA = document.querySelectorAll('#menu a')
         const ht = window.innerHeight
-        
+
         // 첫화면에서는 메뉴를 안보이게 설정한다.    
         if (nowScroll > 0) {
             topMenu.style.opacity = 1
@@ -105,60 +105,63 @@
         다소 상이하기 때문에 브라우저를 인식해서
         작동하는 함수를 만들었습니다!
     */
-    const userAgent = window.navigator.userAgent.toLowerCase(); 
+    const userAgent = window.navigator.userAgent.toLowerCase();
     const isChrome = userAgent.indexOf('chrome');
     const isFirefox = userAgent.indexOf('firefox');
     let checkVer = '';
 
-    if(isChrome>0)
-    checkVer = 'mousewheel';
-    
-    if(isFirefox>0)
-    checkVer = 'DOMMouseScroll';
-    
+    if (isChrome > 0)
+        checkVer = 'mousewheel';
+
+    if (isFirefox > 0)
+        checkVer = 'DOMMouseScroll';
+
     console.log(checkVer)
-    function verScroll(browser){
+
+    function verScroll(browser) {
         for (let b = 0; b < section.length; b++) {
-        section[b].addEventListener(browser, function (e) {
-            e.preventDefault();
-            if(browser == 'mousewheel'){
-                let wheelData = e.wheelDelta
+            section[b].addEventListener(browser, function (e) {
+                e.preventDefault();
+                if (browser == 'mousewheel') {
+                    let wheelData = e.wheelDelta
 
-                if (wheelData > 0 && window.scrollY > 960) {
-                    let prev = this.previousElementSibling.offsetTop;                
-                    window.scrollTo({
-                        top: prev, behavior: 'smooth'
-                    })
-                }
-                else if(wheelData < 0 && window.scrollY < 5000){
-                    let next = this.nextElementSibling.offsetTop;                
-                    window.scrollTo({
-                        top: next, behavior: 'smooth'
-                    })
-                }
-            }
-            else if(browser == 'DOMMouseScroll'){
-                let wheelData = e.detail
+                    if (wheelData > 0 && window.scrollY > 960) {
+                        let prev = this.previousElementSibling.offsetTop;
+                        window.scrollTo({
+                            top: prev,
+                            behavior: 'smooth'
+                        })
+                    } else if (wheelData < 0 && window.scrollY < 5000) {
+                        let next = this.nextElementSibling.offsetTop;
+                        window.scrollTo({
+                            top: next,
+                            behavior: 'smooth'
+                        })
+                    }
+                } else if (browser == 'DOMMouseScroll') {
+                    let wheelData = e.detail
 
-                if (wheelData < 0 && window.scrollY > 960) {
-                    let prev = this.previousElementSibling.offsetTop;                
-                    window.scrollTo({
-                        top: prev, behavior: 'smooth'
-                    })
+                    if (wheelData < 0 && window.scrollY > 960) {
+                        let prev = this.previousElementSibling.offsetTop;
+                        window.scrollTo({
+                            top: prev,
+                            behavior: 'smooth'
+                        })
+                    } else if (wheelData > 0 && window.scrollY < 5000) {
+                        let next = this.nextElementSibling.offsetTop;
+                        window.scrollTo({
+                            top: next,
+                            behavior: 'smooth'
+                        })
+                    }
                 }
-                else if(wheelData > 0 && window.scrollY < 5000){
-                    let next = this.nextElementSibling.offsetTop;                
-                    window.scrollTo({
-                        top: next, behavior: 'smooth'
-                    })
-                }
-            }
 
-        })
+            })
 
         }
     }
     verScroll(checkVer)
+
 
     let el = document.querySelector('.main-text')
     let options = {
