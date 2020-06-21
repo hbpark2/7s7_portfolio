@@ -15,9 +15,6 @@
         }
     })
 
-
-
-
     /* Get a index number from siblings */
     function getIndex(jake) {
         let _i = 0;
