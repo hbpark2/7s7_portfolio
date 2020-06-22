@@ -83,10 +83,7 @@ window.addEventListener('scroll', function () {
             topMenuLi[a].classList.toggle('on');
         };
     }
-
 });
-
-
 /*
     mousewheel 이벤트는 
     다른 브라우저들과 firefox의 사용법이 

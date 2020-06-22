@@ -163,7 +163,7 @@ section {
     letter-spacing: 2px;
     line-height: 1;
 }
-.inner > .moving_txt{
+.inner > .boasting_txt{
     position: absolute;
     width:800px;
     height:40px;
@@ -179,7 +179,7 @@ section {
     border: 2px solid rgba(255,255,255,0.5);
     transition: all 0.5s;
 }
-.inner > .moving_txt:hover{
+.inner > .boasting_txt:hover{
     color: rgba(255,255,255,1);
     border: 2px solid rgba(255,255,255,1);
 }
