@@ -1,32 +1,25 @@
-@charset "utf-8";
-
 /*  Reset CSS  */
 * {
     margin: 0;
     padding: 0;
 }
-
 ol,
 ul {
     list-style: none;
 }
-
 a {
     outline: 0;
     text-decoration: none;
     color: #555;
 }
-
 img {
     border: 0;
 }
-
 body {
     font-family: 'Nanum Gothic', sans-serif;
     font-size: 16px;
     color: #333;
 }
-
 .hidden {
     display: block;
     position: absolute;
@@ -37,7 +30,6 @@ body {
     color: #fff;
 }
 
-/*로고*/
 h1 {
     position: fixed;
     top: 50px;
@@ -152,12 +144,12 @@ section {
 .project_4{
     background-color: #fff;
 }
+
 /*텍스트 박스*/
 .intro_wrap .inner {
     width: 90%;
     margin: 100px auto;
 }
-
 .inner p {
     font-size: 50px;
     letter-spacing: 2px;
@@ -209,64 +201,49 @@ section {
     line-height: 2em;
 
 }
-
-
-
 .about_wrap .inner {
     width: 70%;
     margin: 0 auto;
     margin-top: 5%;
     overflow: hidden;
 }
-
-
 .about_wrap .profile {
     width: 40%;
     float: left;
 }
-
 .about_wrap .profile li {
     width: 50%;
 }
-
 .about_wrap .profile > li > img {
     display: block;
     width: 100%;
     margin: 0 auto;
 }
-
 .about_wrap .profile > li:nth-child(1) {
     overflow: hidden;
     border-radius: 1000px;
 }
-
 .about_wrap .profile li:nth-child(2) {
     margin: 10px 0;
     font-size: 18px;
 }
-
 .special_bold {
     font-size: 24px;
     font-weight: 600;
 }
-
 .about_wrap .intro_txt {
     float: right;
     font-size: 38px;
     line-height: 2em;
     padding-top: 25%;
-
 }
-
 .profile li:nth-child(3) {
     width: 70%;
 }
-
 .profile dl {
     width: 100%;
     overflow: hidden;
 }
-
 .profile dt {
     width: 30%;
     height: 30px;
@@ -277,7 +254,6 @@ section {
     margin-bottom: 10px;
     
 }
-
 .profile dd {
     width: 60%;
     height: 30px;
@@ -358,13 +334,11 @@ section {
     font-weight: 600;
     padding: 10px 0;
 }
-
 .skill_wrap .inner {
     width: 80%;
     margin: 150px auto 0;
     overflow: hidden;
 }
-
 .skill_wrap .inner p {
     width: 40%;
     float: left;
@@ -372,43 +346,34 @@ section {
     margin-right: 10%;
     line-height: 1.5em;
 }
-
 .skill_wrap .inner dl {
     width: 50%;
     float: right;
 }
-
 .skill_wrap .inner dl dt {
     position: relative;
     font-size: 28px;
     margin: 10px 0;
 }
-
 .skill_wrap .inner dl dd {
     line-height: 1.5em;
     font-size: 16px;
 }
-
 .skill_wrap .fab {
     position: absolute;
     left: -60px;
     font-size: 33px;
     color: #800;
 }
-
 .skill_right .font_box{
     display: inline-block;
     padding: 2px 4px;
 }
-
-
-
 .project .inner {
     width: 90%;
     margin: 8% auto;
     overflow: hidden;
 }
-
 .project .inner .desktop {
     position: relative;
     width: 42%;
@@ -418,11 +383,9 @@ section {
     z-index: 5;
     overflow: hidden;
 }
-
 .pcpng {
     width: 90%;
 }
-
 .descgif {
     position: absolute;
     width: 83.5%;
@@ -430,14 +393,12 @@ section {
     top: 3.5%;
     transform: translateX(-50%);
 }
-
 .project .inner .desc {
     width: 50%;
     margin-top: 5%;
     margin-left: 50%;
     overflow: hidden;
 }
-
 .project a {
     position: relative;
     z-index: 20;
@@ -455,48 +416,38 @@ section {
     background-color: #333;
     transition: all .5s;
 }
-
 .project a:hover {
     background-color: #900;
-
 }
-
 .project > .inner > .desc > p:nth-child(1) {
     font-size: 42px;
     line-height: 1.5em;
     text-align: right;
     margin-bottom: 10px;
 }
-
 .project > .inner > .desc > p:nth-child(2) {
     font-size: 18px;
     line-height: 1.8em;
     text-align: right;
     margin-bottom: 10px;
 }
-
 .desc > dl {
     font-size: 24px;
     clear: both;
     border-top: 3px solid #333;
 }
-
 .desc > dl > dt {
     padding: 10px 0;
 }
-
 .desc > dl > dd {
     font-size: 16px;
     line-height: 1.8em;
 }
-
-
 .project_2 .inner {
     width: 90%;
     margin: 8% auto;
     overflow: hidden;
 }
-
 .project_2 > .inner > .desktop {
     position: relative;
     width: 50%;
@@ -504,12 +455,10 @@ section {
     margin-top: 0;
     z-index: 5;
 }
-
 .mobile_png {
     width: 35%;
     margin-left: 25%;
 }
-
 .mobile_gif {
     position: absolute;
     width: 30%;
@@ -517,33 +466,23 @@ section {
     top: 11%;
     transform: translateX(-50%);
 }
-
 .project_2 > .inner > .desc {
     width: 40%;
 }
-
 .project_2 a {
     bottom: 0;
 }
-
-
-
 .project_3 {
     color: #fff;
 }
-
-
 .project_3 a {
-
     color: #fff;
     background-color: #900;
     transition: all .5s;
 }
-
 .project_3 a:hover {
     background-color: #fff;
     color: #333;
-
 }
 .project_3 dl{
     border-top: 3px solid #fff;
@@ -557,14 +496,11 @@ section {
         background-attachment: fixed;
         background-position: 0 -650px;
         overflow: hidden;
-
     }
     
     .intro_wrap > .inner > .main-text > span {
         font-size: 26px;
-
     }
-
     .about_wrap .inner {
         width: 80%;
         margin-top: 10%;
@@ -609,5 +545,4 @@ section {
     .project_3 a {
         bottom: 5%;
     }
-    
 }
