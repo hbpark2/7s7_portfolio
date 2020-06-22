@@ -129,7 +129,6 @@ section {
     overflow: hidden;
 
 }
-
 .about_wrap {
     background: url(../img/bg_16.jpg) no-repeat;
     position: relative;
@@ -137,29 +136,21 @@ section {
     background-attachment: fixed;
     background-position: 0 -1150px;
     overflow: hidden;
-
 }
-
-
-
 .skill_wrap {
     background-color: #ebece7;
 }
-
 .project {
     background-color: #ffe;
 }
-
 .project_2 {
     background-color: #ffe;
 }
-
 .project_3 {
     background-color: #333;
 }
 .project_4{
     background-color: #fff;
-
 }
 /*텍스트 박스*/
 .intro_wrap .inner {
@@ -172,14 +163,31 @@ section {
     letter-spacing: 2px;
     line-height: 1;
 }
-
+.inner > .moving_txt{
+    position: absolute;
+    width:800px;
+    height:40px;
+    top: 50%;
+    left: 50%;
+    margin-top: -20px;
+    margin-left: -400px;
+    font-size: 40px;
+    text-align: center;
+    padding: 5px 3px;
+    color: rgba(255,255,255,0.5);
+    transform: rotate(30deg);
+    border: 2px solid rgba(255,255,255,0.5);
+    transition: all 0.5s;
+}
+.inner > .moving_txt:hover{
+    color: rgba(255,255,255,1);
+    border: 2px solid rgba(255,255,255,1);
+}
 .font_box {
     font-weight: 600;
     border: 3px solid #333;
     box-sizing: border-box;
 }
-
-
 .intro_wrap .right_font {
     position: absolute;
     bottom: 30px;

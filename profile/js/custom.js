@@ -5,7 +5,6 @@ document.cookie = 'cross-site-cookie=bar; SameSite=Lax; Secure';
 const windowHeight = window.innerHeight + 'px';
 //브라우저의 높이값을 section의 높이값으로 지정
 let section = document.querySelectorAll('section')
-
 for (let i = 0; i < section.length; i++) {
     section[i].style.height = windowHeight
 }
@@ -16,7 +15,6 @@ window.addEventListener('resize', function () {
         section[i].style.height = windowHeight
     }
 })
-
 /* Get a index number from siblings */
 function getIndex(jake) {
     let _i = 0;
@@ -26,7 +24,6 @@ function getIndex(jake) {
 
     return parseInt(_i / 2);
 }
-
 /* jQuery의 index()메소드 ==> VanillaJS */
 //  1. 0의 값을 가지는 변수 _i를 선언
 //  2. while 루프를 사용하여 현재 요소의 이전 요소를 찾음
@@ -53,9 +50,6 @@ menuBtn.forEach(function (liitem) {
         //  4. 이동
     });
 });
-
-
-
 
 /*	화면이 스크롤 될 때 현재 영역에 해당하는 메뉴 활성화하기 */
 
