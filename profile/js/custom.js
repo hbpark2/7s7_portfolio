@@ -1,6 +1,3 @@
-document.cookie = 'same-site-cookie=foo; SameSite=Lax';
-document.cookie = 'cross-site-cookie=bar; SameSite=Lax; Secure';
-
 //변수 windowHeight에 브라우저의 높이값을 저장
 const windowHeight = window.innerHeight + 'px';
 //브라우저의 높이값을 section의 높이값으로 지정
